@@ -1,7 +1,9 @@
-# -Skeletone-Project-Household-Ledger
+# 스켈레톤 프로젝트 - 웹 가계부 제작하기
 
-스켈레톤 프로젝트 - 웹 가계부 제작하기
-
-2025.04.04
+## 2025.04.04
 
 1. Commit message template 설정
+
+## 2025.04.07
+
+1. 가계부 UI 및 반응형 UI 디자인
