@@ -3,5 +3,10 @@ import MenuBar from "./components/common/MenuBar.vue";
 </script>
 
 <template>
-    <MenuBar />
+    <div id="container">
+        <MenuBar />
+        <div id="page-rendering-div">
+            <RouterView />
+        </div>
+    </div>
 </template>

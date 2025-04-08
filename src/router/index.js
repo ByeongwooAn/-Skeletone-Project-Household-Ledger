@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import MainView from "../views/MainView.vue";
+import CashFlowView from "../views/CashFlowView.vue";
 import CashCalenderView from "../views/CashCalenderView.vue";
 import CashStatisticsView from "../views/CashStatisticsView.vue";
 import CashReportView from "../views/CashReportView.vue";
@@ -12,6 +13,11 @@ const router = createRouter({
             path: "/",
             name: "Main",
             component: MainView,
+        },
+        {
+            path: "/cashflow",
+            name: "cashflow",
+            component: CashFlowView,
         },
         {
             path: "/cashmonth-calender",
