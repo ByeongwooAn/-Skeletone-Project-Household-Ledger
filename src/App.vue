@@ -1,7 +1,8 @@
 <script setup>
-import MenuBar from "./components/common/MenuBar.vue";
+import MenuBar from './components/common/MenuBar.vue';
 </script>
 
 <template>
-    <MenuBar />
+  <MenuBar />
+  <router-view />
 </template>
