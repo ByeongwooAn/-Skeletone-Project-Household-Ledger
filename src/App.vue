@@ -1,14 +1,7 @@
-<template>
-    <BasicForm />
-</template>
-
-<script>
-import BasicForm from "./components/common/BasicForm.vue";
-
-export default {
-    name: "App",
-    components: {
-        BasicForm,
-    },
-};
+<script setup>
+import MenuBar from "./components/common/MenuBar.vue";
 </script>
+
+<template>
+    <MenuBar />
+</template>

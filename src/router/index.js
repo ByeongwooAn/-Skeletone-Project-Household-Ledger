@@ -1,21 +1,37 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/CashReportView.vue";
+import MainView from "../views/MainView.vue";
+import CashCalenderView from "../views/CashCalenderView.vue";
+import CashStatisticsView from "../views/CashStatisticsView.vue";
+import CashReportView from "../views/CashReportView.vue";
+import SettingView from "../views/SettingView.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
             path: "/",
-            name: "home",
-            component: HomeView,
+            name: "Main",
+            component: MainView,
         },
         {
-            path: "/cashflow",
-            name: "about",
-            // route level code-splitting
-            // this generates a separate chunk (About.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
-            component: () => import("../views/CashFlowView.vue"),
+            path: "/cashmonth-calender",
+            name: "cashmonth-calender",
+            component: CashCalenderView,
+        },
+        {
+            path: "/cashmonth-statistics",
+            name: "cashmonth-statistics",
+            component: CashStatisticsView,
+        },
+        {
+            path: "/cashreport",
+            name: "cashreport",
+            component: CashReportView,
+        },
+        {
+            path: "/setting",
+            name: "setting",
+            component: SettingView,
         },
     ],
 });
