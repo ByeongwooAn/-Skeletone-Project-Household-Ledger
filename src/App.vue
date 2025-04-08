@@ -1,3 +1,14 @@
 <template>
-    <h1>머니로그</h1>
+    <BasicForm />
 </template>
+
+<script>
+import BasicForm from "./components/common/BasicForm.vue";
+
+export default {
+    name: "App",
+    components: {
+        BasicForm,
+    },
+};
+</script>
