@@ -1,0 +1,91 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefce8; /* 연한 노란 배경 */
+  padding: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.title {
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.tab-menu {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 20px;
+  font-weight: bold;
+}
+
+.tab-menu .tab {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: black;
+  transition: all 0.3s;
+}
+
+.tab-menu .tab.active {
+  background-color: #ffef9b;
+  color: black;
+}
+
+.chart-summary-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.chart-area {
+  flex: 1;
+  min-width: 300px;
+  height: 300px;
+  background-color: white; /* 여기 차트 배경 흰색 */
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.summary-box {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fef7d1; /* 연한 노란 박스 */
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.total-amount {
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.summary-card {
+  background-color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-list {
+  margin-top: 40px;
+  /*background-color: white;*/
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.details-list h3 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
