@@ -7,10 +7,6 @@ a:visited {
     color: inherit;
 }
 
-#container {
-    display: flex;
-}
-
 #menu {
     width: 270px;
     height: 100vh;

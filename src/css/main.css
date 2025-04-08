@@ -6,3 +6,7 @@
 body {
     background-color: #feffed;
 }
+
+#container {
+    display: flex;
+}
