@@ -9,8 +9,6 @@ const isMobile = useMediaQuery("(max-width: 394px)");
 <template>
     <div id="container">
         <component :is="isMobile ? MenuBarMobile : MenuBar" />
-        <div id="page-rendering-div">
-            <RouterView />
-        </div>
+        <div id="page-rendering-div"><RouterView /></div>
     </div>
 </template>
