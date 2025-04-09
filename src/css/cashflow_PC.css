@@ -15,8 +15,8 @@
     border: 2px solid rgba(187, 170, 187, 0.6706);
     margin-left: auto; /* 오른쪽에 정렬 */
     margin-top: 10vh; /* 원하는 위치로 조정 */
-
-    margin-left: 30vw; /* 여백 조정 */
+    margin-left: 5vw; /* 여백 조정 */
+    margin-right: 5vw;
     padding: 3vh 3vw;
     border-radius: 30px;
     width: 50vw;

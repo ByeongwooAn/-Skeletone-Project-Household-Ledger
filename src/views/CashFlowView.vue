@@ -10,7 +10,6 @@
       <img class="logo" src="../asset/logo.png" alt="" />
     </header>
     이부분은 모바일 상단 bar코드입니다! -->
-
     <div class="content">
       <div class="button-group">
         <button :class="{ incomeactive: type === 'income' }" @click="type = 'income'">수입</button>
