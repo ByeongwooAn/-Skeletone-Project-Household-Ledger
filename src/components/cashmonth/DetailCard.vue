@@ -24,7 +24,8 @@ defineProps({
   border-radius: 12px;
   margin-bottom: 0.5rem;
   background-color: white;
-  width: 800px;
+  max-width: 900px;
+  width: 90%;
   font-size: 1rem;
 }
 .date {
