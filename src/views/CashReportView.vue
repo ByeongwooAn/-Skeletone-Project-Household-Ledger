@@ -7,7 +7,7 @@
         :class="{ active: activeTab === '전체' }"
         @click="setActiveTab('전체')"
       >
-        전체 ({{ totalCount }}) <br/><span>{{ formatCurrency(totalAmount) }}</span>
+        전체 ({{ totalCount }}) <br/><span class="totalAmount">{{ formatCurrency(totalAmount) }}</span>
       </button>
       <button
         class="tab"
@@ -91,58 +91,74 @@ const formatCurrency = (amount) => {
 
 <style scoped>
 .container {
-  padding: 16px;
-  border: 1px solid #BABABA;
+  position: relative;
+  width: 1155px;
+  max-width: 95%;
+  margin: 0 auto;
+  border: 1px solid black;
   border-radius: 20px;
+  padding: 16px;
+  transform: translateY(50%);
 }
 
+/* 탭 버튼 영역 */
 .tabs {
   display: flex;
-  margin-bottom: 16px;
+  gap: 16px;
   justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .tab {
-  position: relative;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border: none;
-  background-color: #f2f2f2;
+  background-color: #feffed;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 4px;
+  font-size: 16px;
+ 
 }
 
 .tab.active {
-  background-color: #42b983;
-  color: white;
+  background-color: #feffed;
+  
+}
+.tab.active .totalAmount{
+  color: #F99810;
+}
+.tab:hover {
+  color: black; /* 버튼 안의 일반 텍스트는 검정색 */
   font-weight: bold;
+  transition: color 0.3s;
 }
 
-.tab.active::after{
-  transition: all 0.3s;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px; /* 줄 두께 */
-  background-color: #333; /* 줄 색상 */
+.tab:hover .totalAmount {
+  color: #F99810; /* totalAmount 클래스는 오렌지색 */
+  
 }
 
+
+
+/* 테이블 영역 */
 .table {
-  border-top: 2px solid #ddd;
-}
-
-.table-header{
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .table-header,
 .table-row {
   display: grid;
-  
-  grid-template-columns:1fr 2fr 2fr 2fr 2fr;
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
+  grid-template-columns: 40px 1fr 1fr 1fr 2fr;
   align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  gap: 0px 20px;
+}
+
+.table-header {
+  background-color: #f8f8f8;
+  font-weight: bold;
 }
 
 .amount.plus {
@@ -151,5 +167,47 @@ const formatCurrency = (amount) => {
 
 .amount.minus {
   color: red;
+}
+
+/* 반응형: 화면 너비 줄어들 때 */
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr 2fr 2fr 2fr 3fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr 2fr 2fr;
+  }
 }
 </style>
