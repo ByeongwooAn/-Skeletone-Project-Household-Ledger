@@ -18,6 +18,6 @@ defineProps({ total: Number });
   text-align: center;
   font-weight: bold;
   max-width: 600px;
-  width: 90%;
+  width: 100%;
 }
 </style>

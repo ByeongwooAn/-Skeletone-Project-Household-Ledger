@@ -25,7 +25,7 @@ defineProps({
   margin-bottom: 0.5rem;
   background-color: white;
   max-width: 950px;
-  width: 90%;
+  width: 100%;
   font-size: 1rem;
 }
 .date {
