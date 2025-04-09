@@ -5,6 +5,7 @@ header {
   background-color: #ffeb60;
   font-family: 'Black Han Sans';
   font-size: 24px;
+  padding-top: 10px;
   text-align: center;
   align-content: center;
 }
@@ -17,16 +18,18 @@ li {
 
 #menu-image {
   float: left;
+
   margin-left: 16px;
-  width: 24px;
-  height: 24px;
+  width: 23px;
+  height: 23px;
 }
 
 #logo-image {
   float: right;
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   margin-right: 16px;
+  margin-top: -8px;
 }
 
 #mobile-menu {
@@ -43,7 +46,12 @@ li {
   left: 0;
   z-index: 10; /* overlay보다 위 */
 }
-
+#mobile-menu div:hover {
+  background-color: #1202c61c;
+  transition: 6ms;
+  border-radius: 10px;
+  padding: 15px 0px 15px 0px;
+}
 #logo-text {
   margin-top: 24.15px;
 }
