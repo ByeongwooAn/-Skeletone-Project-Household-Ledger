@@ -15,10 +15,12 @@
     border: 2px solid rgba(187, 170, 187, 0.6706);
     margin-left: auto; /* 오른쪽에 정렬 */
     margin-top: 10vh; /* 원하는 위치로 조정 */
-    margin-left: 25vw; /* 여백 조정 */
+
+    margin-left: 30vw; /* 여백 조정 */
     padding: 3vh 3vw;
     border-radius: 30px;
-    width: 60vw;
+    width: 50vw;
+
     height: 75vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }

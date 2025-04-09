@@ -1,10 +1,12 @@
 <template>
   <div class="cashflow-container">
     <!-- <header class="topbar">
+
       <button class="menu-button">
         <img src="../asset/menu.png" alt="메뉴" />
       </button>
       <span class="title">{{ type === 'income' ? '수입' : '지출' }}</span>
+
       <img class="logo" src="../asset/logo.png" alt="" />
     </header>
     이부분은 모바일 상단 bar코드입니다! -->
@@ -44,9 +46,10 @@
 
 <script setup>
 import { ref, reactive, computed } from 'vue';
+
 import categoryData from '../stores/categorydata.js';
-import '../css/cashflow_mobile.css';
 import '../css/cashflow_PC.css';
+import '../css/cashflow_mobile.css';
 
 const type = ref('income');
 
