@@ -12,3 +12,8 @@ const isMobile = useMediaQuery('(max-width: 394px)');
     <div id="page-rendering-div"><RouterView /></div>
   </div>
 </template>
+<style scoped>
+#container{
+    display: flex;
+}
+</style>
