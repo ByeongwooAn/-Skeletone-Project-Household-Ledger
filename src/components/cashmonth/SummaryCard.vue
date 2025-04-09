@@ -24,8 +24,7 @@ defineProps({
   background-color: white;
   color: black;
   max-width: 600px;
-  min-width: 0;
-  width: 100%;
+  width: 90%;
   font-weight: bold;
   flex-wrap: wrap;
 }

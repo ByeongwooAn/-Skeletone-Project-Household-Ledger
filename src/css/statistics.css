@@ -4,7 +4,7 @@
   flex-direction: column;
   padding: 40px;
   margin-left: 10px;
-  width: min(100%, clamp(100px, 80vw, 1300px));
+  width: clamp(100px, 80vw, 1300px);
   box-sizing: border-box;
 }
 
