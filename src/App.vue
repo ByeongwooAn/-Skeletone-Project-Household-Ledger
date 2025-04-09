@@ -10,3 +10,8 @@ import MenuBar from './components/common/MenuBar.vue';
     </div>
   </div>
 </template>
+<style scoped>
+#container{
+    display: flex;
+}
+</style>

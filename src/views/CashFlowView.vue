@@ -5,11 +5,7 @@
         <img src="../asset/menu.png" alt="메뉴" />
       </button>
       <span class="title">{{ type === 'income' ? '수입' : '지출' }}</span>
-      <img
-        class="logo"
-        src="/Users/leegaeun/Desktop/skeletone/-Skeletone-Project-Household-Ledger/src/asset/logo.png"
-        alt=""
-      />
+      <img class="logo" src="../asset/image/logo.png" alt="" />
     </header>
 
     <div class="content">
