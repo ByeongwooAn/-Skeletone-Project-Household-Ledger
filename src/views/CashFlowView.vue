@@ -5,11 +5,7 @@
         <img src="../asset/menu.png" alt="메뉴" />
       </button>
       <span class="title">{{ type === 'income' ? '수입' : '지출' }}</span>
-      <img
-        class="logo"
-        src="/Users/leegaeun/Desktop/skeletone/-Skeletone-Project-Household-Ledger/src/asset/logo.png"
-        alt=""
-      />
+      <!--<img class="logo" src="logo" alt="로고 이미지" />-->
     </header>
 
     <div class="content">
@@ -47,6 +43,7 @@
 import { ref, reactive, computed } from 'vue';
 import categoryData from '../stores/categorydata.js';
 import '../css/cashflow_mobile.css';
+//import logo from '@/assets/logo.png';
 
 const type = ref('income');
 
