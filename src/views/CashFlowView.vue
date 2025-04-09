@@ -46,9 +46,9 @@
 <script setup>
 import { ref, reactive, computed } from 'vue';
 
-/*import categoryData from '../stores/categorydata.js';*/
-import '../css/cashflow_mobile.css';
+import categoryData from '../stores/categorydata.js';
 import '../css/cashflow_PC.css';
+import '../css/cashflow_mobile.css';
 
 const type = ref('income');
 
