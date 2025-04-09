@@ -43,32 +43,25 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'CashFlowView',
-  data() {
-    return {
-      type: 'income',
-      form: {
-        date: '',
-        amount: '',
-        category: '',
-        memo: '',
-      },
-    };
-  },
-
-  methods: {
-    handleSubmit() {
-      console.log('수입/지출내역 저장됨', this.type, this.form);
-    },
-  },
-  computed: {
-    categoryOptions() {
-      return categoryData[this.type] || [];
-    },
-  },
-};
-import '../css/cashflow_mobile.css';
+<script setup>
+import { ref, reactive, computed } from 'vue';
 import categoryData from '../stores/categorydata.js';
+import '../css/cashflow_mobile.css';
+
+const type = ref('income');
+
+const form = reactive({
+  date: '',
+  amount: 0,
+  category: '',
+  memo: '',
+});
+
+const categoryOptions = computed(() => {
+  return categoryData[type.value] || [];
+});
+
+const handleSubmit = () => {
+  console.log('수입/지출내역 저장됨', type.value, form);
+};
 </script>
