@@ -1,0 +1,58 @@
+#main-view-box {
+    position: relative;
+    width: 1155px;
+    height: 798.96px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+}
+
+#main-view-box > div {
+    width: 555.95px;
+    height: 377.74px;
+    background-color: #fef7d1;
+    border-radius: 30px;
+    align-content: center;
+    justify-items: center;
+    float: left;
+}
+
+#main-view-box > div > div {
+    text-align: center;
+    align-content: center;
+    width: 485.18px;
+    height: 61.39px;
+    background-color: #fffefa;
+    border-radius: 30px;
+}
+
+#main-attribute-div1 {
+    margin-right: 20.04px;
+    margin-bottom: 21.745px;
+}
+
+#main-attribute-div2 {
+    margin-left: 20.04px;
+    margin-bottom: 21.745px;
+}
+
+#main-attribute-div3 {
+    margin-right: 20.04px;
+    margin-top: 21.745px;
+}
+
+#main-attribute-div4 {
+    margin-left: 20.04px;
+    margin-top: 21.745px;
+    font-family: "Black Han Sans";
+    font-size: 50px;
+    text-align: center;
+}
+
+#recent-deal-first {
+    margin-top: 0px;
+}
+
+#recent-deal {
+    margin-top: 5px;
+}

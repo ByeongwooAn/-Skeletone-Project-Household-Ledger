@@ -1,27 +1,43 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/CashReportView.vue';
-
-import BasicForm from '@/components/common/BasicForm.vue';
-
-import CashFlowView from '@/views/CashFlowView.vue';
+import MainView from '../views/MainView.vue';
+import CashFlowView from '../views/CashFlowView.vue';
+import CashCalenderView from '../views/CashCalenderView.vue';
+import CashStatisticsView from '../views/CashStatisticsView.vue';
+import CashReportView from '../views/CashReportView.vue';
+import SettingView from '../views/SettingView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
-    },
-    {
-      path: '/menubar',
-      name: 'menubar',
-      component: BasicForm,
+      name: 'Main',
+      component: MainView,
     },
     {
       path: '/cashflow',
       name: 'cashflow',
       component: CashFlowView,
+    },
+    {
+      path: '/cashmonth-calender',
+      name: 'cashmonth-calender',
+      component: CashCalenderView,
+    },
+    {
+      path: '/cashmonth-statistics',
+      name: 'cashmonth-statistics',
+      component: CashStatisticsView,
+    },
+    {
+      path: '/cashreport',
+      name: 'cashreport',
+      component: CashReportView,
+    },
+    {
+      path: '/setting',
+      name: 'setting',
+      component: SettingView,
     },
   ],
 });

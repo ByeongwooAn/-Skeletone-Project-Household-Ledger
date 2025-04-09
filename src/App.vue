@@ -1,23 +1,12 @@
-<template>
-  <div class="app">
-    <RouterView />
-    <BasicForm />
-  </div>
-</template>
-
-<script>
-import BasicForm from './components/common/BasicForm.vue';
-import CashFlowView from './views/CashFlowView.vue';
-
-export default {
-  name: 'App',
-  components: {
-    BasicForm,
-    components: {
-      CashFlowView,
-    },
-  },
-};
+<script setup>
+import MenuBar from './components/common/MenuBar.vue';
 </script>
 
-<style scoped></style>
+<template>
+  <div id="container">
+    <MenuBar />
+    <div id="page-rendering-div">
+      <RouterView />
+    </div>
+  </div>
+</template>

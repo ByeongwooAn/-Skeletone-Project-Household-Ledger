@@ -1,7 +1,7 @@
 /* 전체 컨테이너 */
 .container {
   background-color: #fdfce5;
-  padding-left: ;
+
   display: flex;
   justify-content: center;
   align-items: center;

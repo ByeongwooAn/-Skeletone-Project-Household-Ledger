@@ -1,4 +1,5 @@
 /* 모바일버전 */
+
 .cashflow-container {
   background-color: #feffed;
   padding: 2rem;
@@ -47,6 +48,7 @@
   background-color: #fef7d1;
   padding: 2.5rem 1rem;
   border-radius: 20px;
+
   width: 135%;
   margin: -2rem auto;
 }
