@@ -1,7 +1,8 @@
 /* 모바일버전 */
 @media (max-width: 393px) {
   .cashflow-container {
-    background-color: #fdfce5;
+    background-color: #feffed;
+
     padding: 2rem;
     width: 100%;
     max-width: 393px; /* 모바일 기준 */
