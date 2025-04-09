@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <h2>수입 통계</h2>
     <div class="chart-summary-container">
       <!--chart 공간-->
       <div class="chart-area"></div>
