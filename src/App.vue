@@ -9,5 +9,4 @@ import MenuBar from './components/common/MenuBar.vue';
       <RouterView />
     </div>
   </div>
-  >>>>>>> origin/develop
 </template>
