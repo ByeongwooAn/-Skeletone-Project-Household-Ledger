@@ -10,3 +10,10 @@ body {
 #container {
     display: flex;
 }
+
+/* 모바일 버전 */
+@media (max-width: 394px) {
+    #container {
+        display: block;
+    }
+}

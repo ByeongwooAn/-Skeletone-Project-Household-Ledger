@@ -3,7 +3,7 @@
   /* 전체 컨테이너 */
   .cashflow-container {
     /*background-color: #fdfce5;*/
-    /display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
   }

@@ -1,16 +1,12 @@
 <template>
   <div class="cashflow-container">
-    <!-- <header class="topbar">
-
-
+    <header class="topbar">
       <button class="menu-button">
         <img src="../asset/menu.png" alt="메뉴" />
       </button>
       <span class="title">{{ type === 'income' ? '수입' : '지출' }}</span>
-
-      <img class="logo" src="../asset/logo.png" alt="" />
+      <img class="logo" src="../asset/image/logo.png" alt="" />
     </header>
-    이부분은 모바일 상단 bar코드입니다! -->
 
     <div class="content">
       <div class="button-group">
@@ -30,7 +26,9 @@
           <label>카테고리</label>
           <select v-model="form.category">
             <option value="">선택</option>
-            <option v-for="item in categoryOptions" :key="item" :value="item">{{ item }}</option>
+            <option v-for="item in categoryOptions" :key="item" :value="item">
+              {{ item }}
+            </option>
           </select>
         </div>
         <div class="form-group">
