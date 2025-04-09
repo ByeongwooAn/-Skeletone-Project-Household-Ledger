@@ -89,25 +89,31 @@
   font-weight: bold;
 }
 
-@media (max-width: 650px) {
-  .cash-statistics-view {
-    padding: 20px 12px;
-    margin-left: 0;
-  }
-
+@media (max-width: 768px) {
   .chart-summary-container {
     flex-direction: column;
     align-items: stretch;
   }
 
   .chart-area,
-  .summary-box {
-    width: 100%;
-    padding: 12px;
+  .summary-box,
+  .card,
+  .card-total,
+  .detail-card {
+    width: 100% !important;
+    padding: 16px;
   }
 
   .details-list {
-    margin-left: 0;
-    padding: 12px;
+    padding: 16px;
+  }
+
+  .category,
+  .percent,
+  .amount,
+  .detail-category,
+  .detail-amount {
+    text-align: left;
+    padding: 0;
   }
 }

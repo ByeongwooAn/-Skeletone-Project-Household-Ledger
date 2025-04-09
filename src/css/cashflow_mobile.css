@@ -1,7 +1,11 @@
 /* 모바일버전 */
 @media (max-width: 393px) {
   .cashflow-container {
+<<<<<<< HEAD
     background-color: #feffed;
+=======
+    background-color: #fdfce5;
+>>>>>>> develop/kkm
     padding: 2rem;
     width: 100%;
     max-width: 393px; /* 모바일 기준 */
@@ -45,12 +49,22 @@
     height: 2.2rem;
   }
   .content {
+<<<<<<< HEAD
     background-color: #fef7d1;
     padding: 2.5rem 1rem;
     border-radius: 20px;
 
     width: 135%;
     margin: -2rem auto;
+=======
+    border: 2px solid rgba(187, 170, 187, 0.6706);
+    background-color: #fef7d1;
+    padding: 2.5rem 1rem;
+    border-radius: 20px;
+    width: 135%;
+    margin: -2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+>>>>>>> develop/kkm
   }
   .button-group {
     display: flex;
