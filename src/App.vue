@@ -1,4 +1,12 @@
+<script setup>
+import MenuBar from './components/common/MenuBar.vue';
+</script>
+
 <template>
-    <h1>머니로그</h1>
-    <RouterView/>
+  <div id="container">
+    <MenuBar />
+    <div id="page-rendering-div">
+      <RouterView />
+    </div>
+  </div>
 </template>
