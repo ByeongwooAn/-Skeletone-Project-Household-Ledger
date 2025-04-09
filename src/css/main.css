@@ -3,10 +3,23 @@
     margin: 0px;
 }
 
-body {
+#container {
+    display: flex;
+}
+
+#page-rendering-div {
     background-color: #feffed;
 }
 
-#container {
-    display: flex;
+/*모바일 버전*/
+@media (max-width: 394px) {
+    #container {
+        display: block;
+        background-color: #feffed;
+    }
+
+    #page-rendering-div {
+        height: 100vh;
+        background-color: #feffed;
+    }
 }
