@@ -57,22 +57,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.total-amount {
-  background-color: white;
-  padding: 10px;
-  border-radius: 12px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.summary-card {
-  background-color: white;
-  padding: 10px 16px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 

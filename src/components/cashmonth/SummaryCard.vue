@@ -19,27 +19,28 @@ defineProps({
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 16px;
+  padding: 15px 16px;
   border-radius: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   background-color: white;
   color: black;
-  width: 600px;
+  max-width: 600px;
+  width: 90%;
   font-weight: bold;
 }
+
 .category {
-  width: 120px;
+  width: 95px;
   text-align: left;
-  padding-left: 3rem;
+  padding-left: 2rem;
 }
 .percent {
-  width: 60px;
   text-align: left;
   font-size: 0.9rem;
 }
 .amount {
   flex: 1;
   text-align: right;
-  padding-right: 3rem;
+  padding-right: 2rem;
 }
 </style>

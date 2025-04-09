@@ -14,10 +14,10 @@ defineProps({ total: Number });
   color: black;
   padding: 3px;
   margin-bottom: 4rem;
-  margin-left: 1.5rem;
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
-  width: 600px;
+  max-width: 600px;
+  width: 90%;
 }
 </style>

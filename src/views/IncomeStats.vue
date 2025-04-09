@@ -11,17 +11,15 @@
       <div class="summary-box">
         <DateSelector :year="selectedYear" :month="selectedMonth" @changeMonth="changeMonth" />
 
-        <div class="summary-cards">
-          <TotalCard :total="totalIncome" />
+        <TotalCard :total="totalIncome" />
 
-          <SummaryCard
-            v-for="(amount, category) in categorySummary"
-            :key="category"
-            :category="category"
-            :amount="amount"
-            :percent="((amount / totalIncome) * 100).toFixed(1)"
-          />
-        </div>
+        <SummaryCard
+          v-for="(amount, category) in categorySummary"
+          :key="category"
+          :category="category"
+          :amount="amount"
+          :percent="((amount / totalIncome) * 100).toFixed(1)"
+        />
       </div>
     </div>
 
