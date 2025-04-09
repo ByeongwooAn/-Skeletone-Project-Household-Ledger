@@ -1,7 +1,7 @@
 <script setup>
-import "../../css/menubarmobile.css";
+import "@/css/menubarmobile.css";
 import { RouterLink } from "vue-router";
-import { showMobileMenu } from "../../function/showMobileMenu";
+import { showMobileMenu } from "@/function/showMobileMenu";
 
 const { showMenu, menuRef, toggleMenu } = showMobileMenu();
 </script>
@@ -22,7 +22,7 @@ const { showMenu, menuRef, toggleMenu } = showMobileMenu();
         <transition name="slide"
             ><div v-show="showMenu" id="mobile-menu" ref="menuRef" @click.stop>
                 <div id="logo-text">
-                    <RouterLink to="/mobile/Main">머니로그.zip</RouterLink>
+                    <RouterLink to="/">머니로그.zip</RouterLink>
                 </div>
 
                 <div id="cashmonth-div">
@@ -48,7 +48,7 @@ const { showMenu, menuRef, toggleMenu } = showMobileMenu();
         >
 
         머니로그.zip
-        <RouterLink to="/mobile/Main"
+        <RouterLink to="/"
             ><img id="logo-image" src="../../asset/image/logo.png"
         /></RouterLink>
     </header>
