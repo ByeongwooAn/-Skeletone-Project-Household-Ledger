@@ -1,118 +1,118 @@
-.cashflow-container {
-  background-color: #feffed;
-  padding: 2rem;
-  width: 100%;
-  max-width: 393px; /* 모바일 기준 */
-  box-sizing: border-box;
-  min-height: 100vh; /* 화면 전체 높이 */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #ffeb60;
-  width: 100%;
-  max-width: 393px;
-  height: 4rem;
-  padding: 0 1rem;
-  box-sizing: border-box;
-  z-index: 1000;
-}
-.menu-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.title {
-  font-family: 'Black Han Sans';
-  font-size: 1.5rem;
-  font-weight: bold;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #333;
-}
-.logo {
-  width: 2.2rem;
-  height: 2.2rem;
-}
-.content {
-  background-color: #fef7d1;
-  padding: 2.5rem 1rem;
-  border-radius: 20px;
-  margin-top: -10rem;
-}
-.button-group {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-  padding: 0.5rem 0;
-}
-
-.button-group button {
-  width: 48%;
-  padding: 0.8rem 1rem;
-  font-family: 'Black Han Sans';
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 12px;
-  border: 2px solid #ccc;
-  background: white;
-}
-
-.button-group .expenseactive {
-  border-color: #ff6363;
-  background-color: #ff6363;
-  color: white;
-}
-.button-group .incomeactive {
-  border-color: #5685e9;
-  background-color: #5685e9;
-  color: white;
-}
-
-.form-group {
-  margin-bottom: 1.2rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-weight: bold;
-  font-size: 0.95rem;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 0.6rem;
-  background-color: transparent;
-  font-size: 1rem;
-  border: none;
-  border-bottom: 2px solid #cccccc;
-  box-sizing: border-box;
-}
-
-.submit-button {
-  width: 100%;
-  padding: 0.9rem;
-  background-color: #f99810;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  margin-top: 1.5rem;
-  font-size: 1rem;
-}
-/* 
-@media (min-width: 768px) {
+/* 모바일버전 */
+@media (max-width: 393px) {
   .cashflow-container {
-    max-width: 600px;
+    background-color: #fdfce5;
+    padding: 2rem;
+    width: 100%;
+    max-width: 393px; /* 모바일 기준 */
+    box-sizing: border-box;
+    min-height: 100vh; /* 화면 전체 높이 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-} */
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffeb60;
+    width: 100%;
+    max-width: 393px;
+    height: 4rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+  .menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .title {
+    font-family: 'Black Han Sans';
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+  }
+  .logo {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  .content {
+    border: 2px solid rgba(187, 170, 187, 0.6706);
+    background-color: #fef7d1;
+    padding: 2.5rem 1rem;
+    border-radius: 20px;
+    width: 135%;
+    margin: -2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 0.5rem 0;
+  }
+
+  .button-group button {
+    width: 48%;
+    padding: 0.8rem 1rem;
+    font-family: 'Black Han Sans';
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    background: white;
+  }
+
+  .button-group .expenseactive {
+    border-color: #ff6363;
+    background-color: #ff6363;
+    color: white;
+  }
+  .button-group .incomeactive {
+    border-color: #5685e9;
+    background-color: #5685e9;
+    color: white;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: transparent;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #cccccc;
+    box-sizing: border-box;
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #f99810;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+}

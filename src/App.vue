@@ -4,7 +4,7 @@ import MenuBar from './components/common/MenuBar.vue';
 
 <template>
   <div id="container">
-    <MenuBar />
+    <!-- <MenuBar /> -->
     <div id="page-rendering-div">
       <RouterView />
     </div>
