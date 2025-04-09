@@ -1,6 +1,7 @@
 <template>
   <div class="app">
-    <h2 class="title">월간 요약</h2>
+    <h2 class="title">월간 요약 통계</h2>
+    <br />
     <div class="tab-menu">
       <router-link class="tab" to="/income" :class="{ active: isActive('/income') }">수입 통계</router-link>
       <router-link class="tab" to="/expense" :class="{ active: isActive('/expense') }">지출 통계</router-link>
@@ -105,4 +106,4 @@ const totalIncome = computed(() => {
 });
 </script>
 
-<style scoped></style>
+<style></style>

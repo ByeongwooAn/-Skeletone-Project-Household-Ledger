@@ -12,8 +12,8 @@ defineProps({ total: Number });
 .card-total {
   background: white;
   color: black;
-  padding: 3px;
-  margin-bottom: 4rem;
+  padding: 20px;
+  margin-bottom: 2rem;
   border-radius: 10px;
   text-align: center;
   font-weight: bold;

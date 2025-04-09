@@ -21,12 +21,13 @@ defineProps({
   align-items: center;
   padding: 15px 16px;
   border-radius: 10px;
-  margin-bottom: 0rem;
   background-color: white;
   color: black;
   max-width: 600px;
+  min-width: 0;
   width: 90%;
   font-weight: bold;
+  flex-wrap: wrap;
 }
 
 .category {

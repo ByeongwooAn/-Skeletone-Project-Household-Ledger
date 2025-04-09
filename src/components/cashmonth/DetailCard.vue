@@ -1,8 +1,8 @@
 <template>
   <div class="detail-card">
     <span class="date">{{ date }}</span>
-    <span class="category">{{ category }}</span>
-    <span class="amount">{{ amount.toLocaleString() }}원</span>
+    <span class="detail-category">{{ category }}</span>
+    <span class="detail-amount">{{ amount.toLocaleString() }}원</span>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ defineProps({
   border-radius: 12px;
   margin-bottom: 0.5rem;
   background-color: white;
-  max-width: 900px;
+  max-width: 950px;
   width: 90%;
   font-size: 1rem;
 }
@@ -32,11 +32,11 @@ defineProps({
   width: 200px;
   text-align: left;
 }
-.category {
+.detail-category {
   width: 160px;
   text-align: left;
 }
-.amount {
+.detail-amount {
   flex: 1;
   text-align: right;
   padding-right: 3rem;
