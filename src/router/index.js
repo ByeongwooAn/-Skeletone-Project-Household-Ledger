@@ -4,7 +4,6 @@ import CashFlowView from '../views/CashFlowView.vue';
 import CashCalenderView from '../views/CashCalenderView.vue';
 import CashStatisticsView from '../views/CashStatisticsView.vue';
 import CashReportView from '../views/CashReportView.vue';
-import IncomeStats from '@/views/IncomeStats.vue';
 import SettingView from '../views/SettingView.vue';
 
 const router = createRouter({
@@ -39,11 +38,6 @@ const router = createRouter({
       path: '/setting',
       name: 'setting',
       component: SettingView,
-    },
-    {
-      path: '/income',
-      name: 'IncomeStats',
-      component: IncomeStats,
     },
   ],
 });

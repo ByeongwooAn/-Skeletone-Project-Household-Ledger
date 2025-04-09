@@ -1,19 +1,16 @@
 <template>
   <div class="app">
-    <h2 class="title">월간 요약 통계</h2>
-    <br />
-    <div class="tab-menu">
-      <router-link class="tab" to="/income" :class="{ active: isActive('/income') }">수입 통계</router-link>
-      <router-link class="tab" to="/expense" :class="{ active: isActive('/expense') }">지출 통계</router-link>
-    </div>
-
     <div class="chart-summary-container">
+      <!--chart 공간-->
       <div class="chart-area"></div>
+
+      <!--날짜 바, 총액, 카테고리별 요약 배경 상자-->
       <div class="summary-box">
+        <!--날짜-->
         <DateSelector :year="selectedYear" :month="selectedMonth" @changeMonth="changeMonth" />
-
+        <!--수입 총액-->
         <TotalCard :total="totalIncome" />
-
+        <!--카테고리별 요약-->
         <SummaryCard
           v-for="(amount, category) in categorySummary"
           :key="category"
@@ -23,7 +20,7 @@
         />
       </div>
     </div>
-
+    <!--수입 내역-->
     <div class="details-list">
       <h3>수입 내역</h3>
       <DetailCard
@@ -38,20 +35,17 @@
 </template>
 
 <script setup>
+import { ref, computed, onMounted } from 'vue';
+import axios from 'axios';
+
+import DateSelector from '@/components/cashmonth/DateSelector.vue';
 import TotalCard from '@/components/cashmonth/TotalCard.vue';
 import SummaryCard from '@/components/cashmonth/SummaryCard.vue';
 import DetailCard from '@/components/cashmonth/DetailCard.vue';
-import DateSelector from '@/components/cashmonth/DateSelector.vue';
 
 import '@/css/statistics.css';
 
-import { ref, computed, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
-import axios from 'axios';
-
-const route = useRoute();
-const isActive = (path) => route.path === path;
-
+// 날짜 선택
 const selectedYear = ref(new Date().getFullYear());
 const selectedMonth = ref(new Date().getMonth() + 1);
 
@@ -69,6 +63,7 @@ const changeMonth = (offset) => {
   selectedYear.value = year;
 };
 
+// 데이터 로딩
 const transactions = ref([]);
 
 onMounted(async () => {
@@ -81,6 +76,7 @@ onMounted(async () => {
   }
 });
 
+// 필터링 및 통계 계산
 const filteredIncome = computed(() => {
   return transactions.value.filter((item) => {
     const date = new Date(item.date);
@@ -106,4 +102,4 @@ const totalIncome = computed(() => {
 });
 </script>
 
-<style></style>
+<style scoped></style>
