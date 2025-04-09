@@ -27,7 +27,9 @@
           <label>카테고리</label>
           <select v-model="form.category">
             <option value="">선택</option>
-            <option v-for="item in categoryOptions" :key="item" :value="item">{{ item }}</option>
+            <option v-for="item in categoryOptions" :key="item" :value="item">
+              {{ item }}
+            </option>
           </select>
         </div>
         <div class="form-group">

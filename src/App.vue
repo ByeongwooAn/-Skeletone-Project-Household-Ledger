@@ -1,12 +1,14 @@
 <script setup>
-import MenuBar from './components/common/MenuBar.vue';
+import { useMediaQuery } from '@vueuse/core';
+import MenuBar from '../src/components/common/MenuBar.vue';
+import MenuBarMobile from '../src/components/common/MenuBarMobile.vue';
+
+const isMobile = useMediaQuery('(max-width: 394px)');
 </script>
 
 <template>
   <div id="container">
-    <!-- <MenuBar /> -->
-    <div id="page-rendering-div">
-      <RouterView />
-    </div>
+    <component :is="isMobile ? MenuBarMobile : MenuBar" />
+    <div id="page-rendering-div"><RouterView /></div>
   </div>
 </template>
