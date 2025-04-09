@@ -1,27 +1,27 @@
 #menu {
-    width: 270px;
-    height: 100vh;
-    background-color: #ffeb60;
-    font-family: "Black Han Sans";
-    font-size: 32px;
-    color: #0b036b;
+  width: 270px;
+  height: 100vh;
+  background-color: #ffeb60;
+  font-family: 'Black Han Sans';
+  font-size: 32px;
+  color: #0b036b;
+  position: fixed;
 }
 
 #menu > div {
-    width: 270px;
-    height: 100px;
-    padding-top: 20px;
-    text-align: center;
+  width: 270px;
+  height: 100px;
+  padding-top: 20px;
+  text-align: center;
 }
 
 #cashmonth-div:hover #cashmonth-div-child {
-    display: block;
+  display: block;
 }
 
 #cashmonth-div-child {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-    font-size: 20px;
-    display: none;
-    padding-right: 67px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  display: none;
+  padding-right: 67px;
 }
