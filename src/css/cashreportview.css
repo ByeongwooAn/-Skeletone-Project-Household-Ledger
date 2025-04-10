@@ -17,7 +17,7 @@
     border: 1px solid #ddd;
     border-radius: 20px;
     padding: 4px 12px;
-    background-color: #feffed;
+    background-color: var(--bg-color);
     font-family: sans-serif;
     margin: 20px;
 }
@@ -46,14 +46,14 @@
 .tab {
     padding: 10px 20px;
     border: none;
-    background-color: #feffed;
+    background-color: var(--bg-color);
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
 }
 
 .tab.active {
-    background-color: #feffed;
+    background-color: var(--bg-color);
     font-weight: bold;
 }
 .tab.active .totalAmount {

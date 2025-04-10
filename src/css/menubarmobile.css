@@ -2,12 +2,13 @@ header {
     position: fixed;
     width: 100vw;
     height: 60px;
-    background-color: #ffeb60;
+    background-color: var(--point-color);
     font-family: var(--main-font);
     font-size: 24px;
     padding-top: 10px;
     text-align: center;
     align-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 body.dark-mode header {
     position: fixed;
@@ -61,7 +62,7 @@ body.dark-mode #menu-image {
     display: block;
     width: 128px;
     height: 100vh;
-    background-color: #ffeb60;
+    background-color: var(--point-color);
     font-family: var(--main-font);
     font-size: 20px;
     color: #0b036b;

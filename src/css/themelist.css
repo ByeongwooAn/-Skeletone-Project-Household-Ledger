@@ -1,0 +1,18 @@
+:root {
+    --bg-color: #feffed;
+    --point-color: #ffeb60;
+}
+
+/* 테마별 색상 정의 */
+body.theme-basic {
+    --bg-color: #feffed;
+    --point-color: #ffeb60;
+}
+body.theme-orange {
+    --bg-color: #fff3e0;
+    --point-color: #ff9800;
+}
+body.theme-babypink {
+    --bg-color: #fff0f5;
+    --point-color: #ff69b4;
+}

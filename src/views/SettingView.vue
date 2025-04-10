@@ -4,6 +4,7 @@ import axios from "axios";
 import "../css/setting_PC.css";
 import "../css/setting_mobile.css";
 import "../css/fontlist.css"; // 폰트 CSS 추가
+import "../css/themelist.css";
 import { useSetting } from "../function/fonts.js"; // 만든 훅 import
 
 const userInfo = ref({
@@ -24,6 +25,17 @@ onMounted(async () => {
     mode.value = res.data.mode || "light";
     fontSetting.value = res.data.fontSetting || "Black Han Sans";
     changeFont(fontSetting.value); // 페이지 들어올 때 설정된 폰트 적용
+});
+
+watch(themeColor, (newTheme) => {
+    document.body.classList.remove(
+        "theme-basic",
+        "theme-orange",
+        "theme-babypink"
+    );
+
+    const themeClass = `theme-${newTheme.toLowerCase()}`;
+    document.body.classList.add(themeClass);
 });
 
 watch(fontSetting, (newFont) => {

@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #feffed;
+    background-color: var(--bg-color);
 }
 
 body.dark-mode {

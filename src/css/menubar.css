@@ -13,10 +13,11 @@ a:visited {
     left: 0px;
     width: 270px;
     height: 100vh;
-    background-color: #ffeb60;
+    background-color: var(--point-color);
     font-family: var(--main-font);
     font-size: 32px;
     color: #0b036b;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #menu > div {
