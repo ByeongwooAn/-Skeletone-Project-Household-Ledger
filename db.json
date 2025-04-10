@@ -15,6 +15,14 @@
       "amount": 23000,
       "category": "💰부수입",
       "memo": "!!"
+    },
+    {
+      "id": 1,
+      "type": "expense",
+      "date": "2025-04-11",
+      "amount": 12000,
+      "category": "🍙식비",
+      "memo": "마라탕!"
     }
   ],
   "userInfo": [
