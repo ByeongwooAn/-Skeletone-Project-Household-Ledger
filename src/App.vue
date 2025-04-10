@@ -15,6 +15,7 @@ const isMobile = useMediaQuery("(max-width: 394px)");
 </template>
 <style scoped>
 #container {
-    display: flex;
+  display: flex; /* 가로로 배치 */
 }
+
 </style>
