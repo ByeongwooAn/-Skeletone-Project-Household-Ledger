@@ -47,6 +47,12 @@
     text-align: center;
 }
 
+#mainview-text1 {
+    font-family: "Black Han Sans";
+    font-size: 40px;
+    margin-bottom: 21.745px;
+}
+
 .recent-deal {
     margin-top: 5px;
     text-align: center;

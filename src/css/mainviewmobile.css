@@ -40,6 +40,18 @@
     height: 100px;
 }
 
+#mobile-main-adttribute1 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+#mobile-main-adttribute2 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #f87171;
+}
+
 #mobile-main-adttribute2 {
     margin-top: 5.72px;
 }
