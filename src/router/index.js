@@ -1,12 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import MainView from '../views/MainView.vue';
-import CashFlowView from '../views/CashFlowView.vue';
-import CashCalenderView from '../views/CashCalenderView.vue';
-import CashStatisticsView from '../views/CashStatisticsView.vue';
-import CashReportView from '../views/CashReportView.vue';
-import SettingView from '../views/SettingView.vue';
-
-import MainViewMobile from '../views/MainViewMobile.vue';
+import MainView from '@/views/MainView.vue';
+import CashFlowView from '@/views/CashFlowView.vue';
+import CashCalenderView from '@/views/CashCalenderView.vue';
+import CashStatisticsView from '@/views/CashStatisticsView.vue';
+import CashReportView from '@/views/CashReportView.vue';
+import SettingView from '@/views/SettingView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,14 +38,6 @@ const router = createRouter({
       path: '/setting',
       name: 'setting',
       component: SettingView,
-    },
-
-    //모바일 Router
-
-    {
-      path: '/mobile/Main',
-      name: 'MobileMain',
-      component: MainViewMobile,
     },
   ],
 });

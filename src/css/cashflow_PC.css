@@ -19,7 +19,8 @@
     margin-right: 5vw;
     padding: 3vh 3vw;
     border-radius: 30px;
-    width: 60vw;
+    width: 50vw;
+
     height: 75vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -28,25 +29,28 @@
   .button-group {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+    padding: 0.5rem 0;
   }
 
   .button-group button {
     width: 48%;
     padding: 10px;
     font-weight: bold;
+    font-family: 'Black Han Sans';
     border: 2px solid #ccc;
     border-radius: 6px;
     background-color: #f5f5f5;
     cursor: pointer;
+    font-size: 32px;
   }
 
   .button-group .expenseactive {
-    border-color: #ff6363;
+    background-color: #ff6363;
   }
 
   .button-group .incomeactive {
-    border-color: #5685e9;
+    background-color: #5685e9;
   }
 
   /* .toggle-btn.active {
@@ -56,14 +60,14 @@
 
   /* 필드 라인 */
   .form-group {
-    margin-bottom: 1.2rem;
+    margin-bottom: 3rem;
   }
 
   .form-group label {
     display: block;
-    margin-bottom: 0.3rem;
+    margin-bottom: 1.5rem;
     font-weight: bold;
-    font-size: 0.95rem;
+    font-size: 2rem;
   }
 
   .form-group input,
@@ -71,7 +75,8 @@
     width: 100%;
     padding: 0.6rem;
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     border: none;
     border-bottom: 2px solid #cccccc;
     box-sizing: border-box;
