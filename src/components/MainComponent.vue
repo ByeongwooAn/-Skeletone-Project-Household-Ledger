@@ -19,12 +19,11 @@ onMounted(async () => {
 <template>
     <div class="main-view-box">
         <div class="main-attribute-div1">
-            <div class="recent-cashreport">최근 거래 내역</div>
-            <div class="recent-deal"v-for="item in list.slice(0, 4)" :key="item.id">
-  {{ item.date }}  | {{item.type }}  |  {{ item.category }}  |  {{ item.amount.toLocaleString() }}원
-</div>
-            
-        </div>
+            <div class="recent-cashreport">최근 추가 내역</div>
+                <div class="recent-deal"v-for="item in list.slice(0, 4)" :key="item.id">
+                    {{ item.date }}  | {{item.type }}  |  {{ item.category }}  |  {{ item.amount.toLocaleString() }}원
+                </div>
+            </div>
 
         <div id="main-attribute-div2">
             <div id="recent-total-income">4월 총 수입</div>
