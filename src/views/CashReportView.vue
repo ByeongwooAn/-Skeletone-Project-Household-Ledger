@@ -26,14 +26,14 @@
         :class="{ active: activeTab === '수입' }"
         @click="setActiveTab('수입')"
       >
-        수입 ({{ incomeCount }})<br/>
+        수입 ({{ incomeCount }})<br/><span class="incomeAmount">{{ formatCurrency(incomeAmount) }}</span>
       </button>
       <button
         class="tab"
         :class="{ active: activeTab === '지출' }"
         @click="setActiveTab('지출')"
       >
-        지출 ({{ expenseCount }})
+        지출 ({{ expenseCount }})<br/><span class="expenseAmount">{{ formatCurrency(expenseAmount) }}</span>
       </button>
     </div>
 
@@ -61,14 +61,19 @@
           {{ formatCurrency(item.amount) }}
         </div>
         <div>{{ item.memo }}</div>
+        <div>삭제버튼</div>
       </div>
     </div>
+   
+    <addButton/>
   </div>
+
 </template>
 
 <script setup>
+import addButton from '@/components/addButton.vue';
 import '@/css/cashreportview.css';
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 
 // 헤더 영역
 
@@ -89,35 +94,79 @@ function nextMonth() {
 
 
 // 테이블 영역
+
+const list=ref([]);
+
+onMounted(async () => {
+  const res = await fetch("../db.json");
+  const json = await res.json();
+
+  // 불러온 데이터를 한글 타입으로 변환
+  list.value = json.cashflows.map(item => ({
+    ...item,
+    type: item.type === "income" ? "수입" :
+          item.type === "expense" ? "지출" :
+          item.type || "지출", // 누락된 경우 대비
+    date: item.date || "-",
+    category: item.category || "-",
+  }));
+});
+
+
 const activeTab = ref("전체");
 
 const setActiveTab = (tab) => {
   activeTab.value = tab;
 };
 
-const list = ref([
-  { date: "2025.03.07(월)", category: "쇼핑", amount: 100000, memo: "가전제품 구입", type: "수입" },
-  { date: "2025.04.07(월)", category: "쇼핑", amount: 100000, memo: "가전제품 구입", type: "수입" },
-  { date: "2025.04.07(월)", category: "쇼핑", amount: 100000, memo: "가전제품 구입", type: "지출" },
-  // 추가로 더...
-]);
 
+//  현재 월 + 탭 상태에 따라 필터링된 리스트
 const filteredList = computed(() => {
-  if (activeTab.value === "전체") return list.value;
-  return list.value.filter((item) => item.type === activeTab.value);
+  const monthStr = currentMonth.value; // "YYYY-MM"
+
+  return list.value.filter(item => {
+    // 날짜가 현재 월로 시작하는지 확인
+    const inCurrentMonth = item.date?.startsWith(monthStr);
+
+    // 탭 상태가 전체일 경우 수입/지출 무관
+    const tabMatch = activeTab.value === "전체"
+      ? true
+      : item.type === activeTab.value;
+
+    return inCurrentMonth && tabMatch;
+  });
 });
 
+//거래내역 개수 카운트 
 const totalCount = computed(() => list.value.length);
-const incomeCount = computed(() => list.value.filter(item => item.type === "수입").length);
-const expenseCount = computed(() => list.value.filter(item => item.type === "지출").length);
 
-const totalAmount = computed(() => {
-  return list.value.reduce((sum, item) => sum + item.amount, 0);
-});
+const incomeCount = computed(() =>
+  list.value.filter(item => item.type === "수입").length
+);
 
+const expenseCount = computed(() =>
+  list.value.filter(item => item.type === "지출").length
+);
 
+//거래내역 금액 카운트
+const totalAmount = computed(() =>
+  list.value.reduce((sum, item) => sum + item.amount, 0)
+);
+const incomeAmount = computed(() =>
+  list.value.filter(item => item.type==="수입").reduce((sum, item)=> sum+item.amount,0)
+);
+const expenseAmount = computed(() =>
+  list.value.filter(item=>item.type==="지출").reduce((sum,item)=>sum+item.amount,0)
+);
 
+//원화 포맷팅
 const formatCurrency = (amount) => {
   return amount.toLocaleString() + "원";
 };
+
+//추가 버튼 클릭시 페이지 이동
+const goToAddPage=()=>{
+  router.push('/cashflow');
+}
 </script>
+
