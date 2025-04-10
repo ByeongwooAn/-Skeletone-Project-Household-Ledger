@@ -161,25 +161,41 @@
 }
 
 /* 모바일 버전 */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .cash-statistics-view {
         margin-left: 0;
     }
+
+    .tab-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .tab-menu .tab {
+        margin-bottom: 0.5rem;
+        background-color: #fffde7;
+        border-radius: 0;
+    }
+
+    .tab-menu .tab.active {
+        background-color: #fffde7;
+        border-bottom: 2px solid #fdd835;
+    }
+
     .chart-summary-container {
         flex-direction: column;
     }
 
     .chart-area,
     .summary-box {
-        width: 325px;
+        width: 90%;
     }
 
-    .tab-menu {
-        flex-direction: row;
-    }
-
-    .tab {
-        margin-bottom: 0.5rem;
+    .card .category {
+        word-break: keep-all;
+        white-space: normal;
     }
 
     .detail-card {
