@@ -1,20 +1,17 @@
 .container {
-  margin: 300px;
-
-  
-
-  }
-  /* 헤더 영역 */
-  .headers{
+    margin: 300px;
+}
+/* 헤더 영역 */
+.headers {
     margin: 0 auto;
     text-align: center;
-  }
-  .headers>h2{
-    font-size:  36px;
+}
+.headers > h2 {
+    font-size: 36px;
     margin: 20px;
-    font-family: 'Black Han Sans', sans-serif;
-  }
-  .month-picker {
+    font-family: "Black Han Sans", sans-serif;
+}
+.month-picker {
     display: inline-flex;
     align-items: center;
     border: 1px solid #ddd;
@@ -23,113 +20,104 @@
     background-color: #feffed;
     font-family: sans-serif;
     margin: 20px;
-  }
-  
-  .nav-button {
+}
+
+.nav-button {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 16px;
     padding: 4px 8px;
-  }
-  
-  .current-month {
+}
+
+.current-month {
     margin: 0 8px;
     font-weight: bold;
-  }
-  
-  
-  
-  /* 탭 버튼 영역 */
-  .tabs {
+}
+
+/* 탭 버튼 영역 */
+.tabs {
     display: flex;
     gap: 16px;
     justify-content: space-around;
     margin-bottom: 20px;
-  }
-  
-  .tab {
+}
+
+.tab {
     padding: 10px 20px;
     border: none;
     background-color: #feffed;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-   
-  }
-  
-  .tab.active {
+}
+
+.tab.active {
     background-color: #feffed;
     font-weight: bold;
-  }
-  .tab.active .totalAmount{
-    color: #F99810;
-  }
-  .tab:hover {
+}
+.tab.active .totalAmount {
+    color: #f99810;
+}
+.tab:hover {
     color: black; /* 버튼 안의 일반 텍스트는 검정색 */
     font-weight: bold;
     transition: color 0.3s;
-  }
-  
-  .tab:hover .totalAmount {
-    color: #F99810; /* totalAmount 클래스는 오렌지색 */
-    
-  }
-  
-  .tab.active .incomeAmount{
+}
+
+.tab:hover .totalAmount {
+    color: #f99810; /* totalAmount 클래스는 오렌지색 */
+}
+
+.tab.active .incomeAmount {
     color: green;
-  }
-  .tab.active .expenseAmount{
+}
+.tab.active .expenseAmount {
     color: red;
-  }
-  
-  
-  /* 테이블 영역 */
-  .table {
+}
+
+/* 테이블 영역 */
+.table {
     display: flex;
     flex-direction: column;
     gap: 8px;
-  }
-  
-  .table-header,
-  .table-row {
+}
+
+.table-header,
+.table-row {
     display: grid;
     grid-template-columns: 40px 1fr 1fr 1fr 2fr 40px;
     align-items: center;
     padding: 8px;
     border-bottom: 1px solid #ddd;
     gap: 0px 20px;
-  }
-  
-  .table-header {
+}
+
+.table-header {
     background-color: #f8f8f8;
     font-weight: bold;
-  }
-  
-  .amount.plus {
+}
+
+.amount.plus {
     color: green;
-  }
-  
-  .amount.minus {
+}
+
+.amount.minus {
     color: red;
-  }
-  
-  /* 반응형: 화면 너비 줄어들 때 */
-  
-  /* 최대 400px까지 이 미디어쿼리를 적용 */
-  @media (max-width: 393px) {
+}
+
+/* 반응형: 화면 너비 줄어들 때 */
+
+/* 최대 400px까지 이 미디어쿼리를 적용 */
+@media (max-width: 393px) {
     .container {
-      width: 100%;
-      min-width: 393px;
-      margin-top: 70px;
-      margin-left:0;
-      padding: 12px;
-      
+        width: 100%;
+        min-width: 393px;
+        margin-top: 100px;
+        margin-left: 0;
     }
-  
+
     .tabs {
-      gap: 8px;
+        gap: 8px;
     }
-  
-    
-  }
+}
