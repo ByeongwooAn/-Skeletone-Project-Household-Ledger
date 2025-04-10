@@ -1,6 +1,6 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
-import "../../css/menubar.css";
+import { RouterLink } from "vue-router";
+import "@/css/menubar.css";
 </script>
 
 <template>
