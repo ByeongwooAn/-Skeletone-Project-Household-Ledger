@@ -1,14 +1,25 @@
 <template>
   <div class="app">
     <h2>수입 통계</h2>
+    <br />
+    <!--모바일 날짜 -->
+    <div class="mobile-date-selector">
+      <DateSelector :year="selectedYear" :month="selectedMonth" @changeMonth="changeMonth" />
+    </div>
+
     <div class="chart-summary-container">
       <!--chart 공간-->
       <div class="chart-area"></div>
 
       <!--날짜 바, 총액, 카테고리별 요약 배경 상자-->
       <div class="summary-box">
-        <!--날짜-->
-        <DateSelector :year="selectedYear" :month="selectedMonth" @changeMonth="changeMonth" />
+        <!--PC 날짜-->
+        <DateSelector
+          class="desktop-date-selector"
+          :year="selectedYear"
+          :month="selectedMonth"
+          @changeMonth="changeMonth"
+        />
         <!--수입 총액-->
         <TotalCard :total="totalIncome" />
         <!--카테고리별 요약-->
@@ -21,6 +32,7 @@
         />
       </div>
     </div>
+
     <!--수입 내역-->
     <div class="details-list">
       <h3>수입 내역</h3>
