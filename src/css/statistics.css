@@ -140,7 +140,7 @@
   font-weight: bold;
 }
 
-/* 디테일 리스트 */
+/* 수입/지출 내역 */
 .details-list {
   margin-top: 3rem;
 }
@@ -161,6 +161,12 @@
 .detail-card .detail-amount {
   flex: 1;
   font-size: 0.95rem;
+  text-align: left;
+}
+.detail-card .detail-memo {
+  flex: 1;
+  font-size: 0.95rem;
+  text-align: right;
 }
 
 /* 모바일 버전 */
@@ -173,7 +179,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
   }
 
   .tab-menu .tab {
@@ -191,6 +197,7 @@
     display: flex;
     justify-content: center;
     margin: 1rem 0;
+    font-weight: bold;
   }
 
   .desktop-date-selector {
@@ -209,7 +216,7 @@
   .chart-summary-container {
     flex-direction: column;
   }
-
+  /*카테고리별 요약 단어 단위별 줄바꿈*/
   .card .category {
     word-break: keep-all;
     white-space: normal;
@@ -222,5 +229,10 @@
 
   .detail-card span {
     margin-bottom: 0.3rem;
+  }
+  /*수입/지출 내역 단어 단위별 줄바꿈*/
+  .detail-card .detail-category {
+    word-break: keep-all;
+    white-space: normal;
   }
 }
