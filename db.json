@@ -99,5 +99,16 @@
             "memo": "치과",
             "createdAt": "2025-04-10T13:51:19.533Z"
         }
+    ],
+    "userInfo": [
+        {
+            "id": "1",
+            "name": "홍길동",
+            "nickname": "홍",
+            "email": "123@ㅜㅁㅍㄷㄱ.채ㅡ",
+            "mode": "dark",
+            "themeColor": "Orange",
+            "fontSetting": "Sunflower"
+        }
     ]
 }
