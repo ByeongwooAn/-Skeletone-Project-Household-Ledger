@@ -1,7 +1,7 @@
 #calender {
     width: 1360px;
     height: 933px;
-    margin: 27px 25px 27px 150px;
+    margin: 27px 25px 27px 25px;
 }
 
 #calender-title {
@@ -69,4 +69,71 @@ tbody tr {
 
 .saturday {
     color: #0022ff;
+}
+
+@media (max-width: 394px) {
+    #calender {
+        width: 333px;
+        height: 237.46px;
+        margin-top: 100px;
+    }
+
+    #calender-title {
+        font-family: "ltim";
+        font-size: 10px;
+        width: 333px;
+        height: 12px;
+        text-align: center;
+        background-color: #ffeb60;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+
+    table {
+        font-family: "ltim";
+        display: block;
+        width: 332.59px;
+        height: 212.51px;
+        border-collapse: collapse;
+        background-color: #fffce9;
+    }
+
+    thead tr {
+        height: 14.18px;
+    }
+    tbody tr {
+        height: 42.8px;
+    }
+
+    #weekname-row {
+        height: 14.18px;
+    }
+
+    #weekname-col {
+        width: 47.44px;
+        border: solid 1px;
+        border-color: #7e72201a;
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    #day-row {
+        height: 42.8px;
+    }
+
+    #day-col {
+        border: solid 1px;
+        border-color: #7e72201a;
+        width: 194px;
+        vertical-align: top;
+        font-size: 12px;
+    }
+
+    #today {
+        border-radius: 20px;
+        background-color: #0b036b;
+        padding: 2px;
+        color: #ffffff;
+    }
 }

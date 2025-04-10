@@ -9,6 +9,8 @@ body {
 
 #container {
     display: flex;
+    justify-items: center;
+    align-content: center;
 }
 
 #page-rendering-div {

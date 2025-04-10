@@ -1,20 +1,28 @@
 {
-    "cashflows": [
-        {
-            "id": 1,
-            "type": "expense",
-            "date": "2025-04-14",
-            "amount": 20000,
-            "category": "🚗교통",
-            "memo": "됐나?!!"
-        },
-        {
-            "id": 2,
-            "type": "income",
-            "date": "2025-04-09",
-            "amount": 23000,
-            "category": "💰부수입",
-            "memo": "!!"
-        }
-    ]
+  "cashflows": [
+    {
+      "id": "1",
+      "type": "expense",
+      "date": "2025-04-14",
+      "amount": 20000,
+      "category": "🚗교통",
+      "memo": "됐나?!!"
+    },
+    {
+      "id": "2",
+      "type": "income",
+      "date": "2025-04-09",
+      "amount": 23000,
+      "category": "💰부수입",
+      "memo": "!!"
+    },
+    {
+      "id": 1,
+      "type": "income",
+      "date": "2025-04-10",
+      "amount": 250000,
+      "category": "💰부수입",
+      "memo": "용돈"
+    }
+  ]
 }
