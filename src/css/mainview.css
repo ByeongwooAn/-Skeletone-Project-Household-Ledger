@@ -1,4 +1,4 @@
-#main-view-box {
+.main-view-box {
     position: relative;
     width: 1155px;
     height: 798.96px;
@@ -7,7 +7,7 @@
     transform: translate(-50%, -50%);
 }
 
-#main-view-box > div {
+.main-view-box > div {
     width: 555.95px;
     height: 377.74px;
     background-color: #fef7d1;
@@ -17,9 +17,15 @@
     float: left;
 }
 
-#main-attribute-div1 {
+.main-attribute-div1 {
     margin-right: 20.04px;
     margin-bottom: 21.745px;
+   
+}
+.recent-cashreport{
+    font-family: "Black Han Sans";
+    font-size: 40px;
+    text-align: center;
 }
 
 #main-attribute-div2 {
@@ -42,17 +48,8 @@
     text-align: center;
 }
 
-#recent-deal-first {
-    margin-top: 0px;
-    text-align: center;
-    align-content: center;
-    width: 485.18px;
-    height: 61.39px;
-    background-color: #fffefa;
-    border-radius: 30px;
-}
 
-#recent-deal {
+.recent-deal {
     margin-top: 5px;
     text-align: center;
     align-content: center;
