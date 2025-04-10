@@ -1,9 +1,9 @@
 <script setup>
-import { ref, reactive, computed } from "vue";
-import categoryData from "../stores/categorydata.js";
-import axios from "axios";
-import "../css/cashflow_PC.css";
-import "../css/cashflow_mobile.css";
+import { ref, reactive, computed, onMounted } from 'vue';
+import categoryData from '../stores/categorydata.js';
+import axios from 'axios';
+import '../css/cashflow_PC.css';
+import '../css/cashflow_mobile.css';
 
 const type = ref("income");
 const nextId = ref(1);
@@ -17,6 +17,20 @@ const form = reactive({
     memo: "",
 });
 
+onMounted(async ()=> {
+  try {
+    const res = await axios.get('http://localhost:3001/cashflows');
+    const data = res.data;
+    if (data.length > 0) {
+      const maxId = Math.max(...data.map(item => item.id));
+      nextId.value = maxId + 1;
+    }
+  }
+  catch(error){
+    console.log('id 최신화 실패: ', error);
+  }
+})
+
 const categoryOptions = computed(() => {
     return categoryData[type.value] || [];
 });
@@ -26,19 +40,32 @@ const setType = (newType) => {
 };
 
 const handleSubmit = async () => {
-    form.id = String(nextId.value);
-    try {
-        await axios.post("http://localhost:3001/cashflows", { ...form });
-        console.log("저장 성공!");
-        form.date = "";
-        form.amount = 0;
-        form.category = "";
-        form.memo = "";
-    } catch (error) {
-        console.error("저장 실패:", error);
-    }
-    console.log("수입/지출내역 저장됨", { ...form });
+  form.id = nextId.value;
+
+  //  현재 시간 생성 (ISO 문자열 형식)
+  const createdAt = new Date().toISOString();
+
+  try {
+    //  createdAt 포함해서 post 전송
+    await axios.post('http://localhost:3001/cashflows', {
+      ...form,
+      createdAt, // 새 속성 추가
+    });
+
+    console.log('저장 성공!');
+
+    // 입력 필드 초기화
+    form.date = '';
+    form.amount = 0;
+    form.category = '';
+    form.memo = '';
     nextId.value += 1;
+
+  } catch (error) {
+    console.error('저장 실패:', error);
+  }
+
+  console.log('수입/지출내역 저장됨', { ...form, createdAt });
 };
 </script>
 
