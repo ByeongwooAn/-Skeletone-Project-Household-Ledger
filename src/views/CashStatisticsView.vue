@@ -22,11 +22,8 @@ import { ref } from 'vue';
 
 import '@/css/statistics.css';
 
-// 탭에 따라 다른 컴포넌트 보여줌
 import IncomeStats from '@/components/cashmonth/IncomeStats.vue';
 import ExpenseStats from '@/components/cashmonth/ExpenseStats.vue';
 
 const currentTab = ref('income'); // 기본 탭: 수입 통계
 </script>
-
-<style scoped></style>
