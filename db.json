@@ -1,5 +1,51 @@
 {
-  "cashflows": [],
+  "cashflows": [
+    {
+      "id": "1",
+      "type": "income",
+      "date": "2025-04-11",
+      "amount": 3500000,
+      "category": "💵주수입",
+      "memo": "월급",
+      "createdAt": "2025-04-10T17:51:45.913Z"
+    },
+    {
+      "id": "2",
+      "type": "income",
+      "date": "2025-04-11",
+      "amount": 1500000,
+      "category": "💰부수입",
+      "memo": "상여금",
+      "createdAt": "2025-04-10T17:56:40.254Z"
+    },
+    {
+      "id": "3",
+      "type": "expense",
+      "date": "2025-04-11",
+      "amount": 500000,
+      "category": "🏠주거",
+      "memo": "월세",
+      "createdAt": "2025-04-10T17:56:53.998Z"
+    },
+    {
+      "id": "4",
+      "type": "expense",
+      "date": "2025-04-11",
+      "amount": 150000,
+      "category": "📞통신",
+      "memo": "핸드폰",
+      "createdAt": "2025-04-10T17:57:15.277Z"
+    },
+    {
+      "id": "5",
+      "type": "expense",
+      "date": "2025-04-11",
+      "amount": 120000,
+      "category": "🚗교통",
+      "memo": "주유비",
+      "createdAt": "2025-04-10T17:57:28.517Z"
+    }
+  ],
   "userInfo": [
     {
       "id": "1",
