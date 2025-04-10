@@ -1,7 +1,7 @@
 #calender {
     width: 1360px;
     height: 978px;
-    margin: 27px 25px 27px 25px;
+    margin: 27px 25px 27px 150px;
 }
 
 #calender-title {
@@ -92,7 +92,7 @@ tbody tr {
     height: 465px;
     background-color: #fef7d1;
     margin-top: 27px;
-    margin-left: 25px;
+    margin-left: 150px;
     border-radius: 20px;
 }
 
@@ -137,6 +137,7 @@ tbody tr {
         width: 333px;
         height: 237.46px;
         margin-top: 100px;
+        margin-left: 30px;
     }
 
     #calender-title {
@@ -196,5 +197,51 @@ tbody tr {
         background-color: #0b036b;
         padding: 2px;
         color: #ffffff;
+    }
+
+    #day-cash-inpormation {
+        width: 332px;
+        height: 148px;
+        background-color: #fef7d1;
+        margin-top: 27px;
+        margin-left: 30px;
+        border-radius: 20px;
+    }
+
+    #day-cash-report-text {
+        margin-left: 18px;
+        padding-top: 5px;
+        font-family: "Black Han Sans";
+        font-size: 18px;
+    }
+
+    .month-cash-report-div {
+        text-align: center;
+        width: 289px;
+        height: 28px;
+        background-color: #fffefa;
+        border-radius: 10px;
+        margin-left: 21px;
+        align-content: center;
+    }
+
+    #month-cash-total-income {
+        font-family: "ltim";
+        color: #60a5fa;
+        font-size: 12px;
+        margin-top: 11px;
+    }
+
+    #month-cash-total-expense {
+        color: #f87171;
+        font-family: "ltim";
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    #month-cash-result {
+        font-family: "ltim";
+        font-size: 12px;
+        margin-top: 8px;
     }
 }

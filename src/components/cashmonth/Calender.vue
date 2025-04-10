@@ -155,11 +155,6 @@ function selectDate(day) {
 
     <div>
         <div id="day-cash-inpormation">
-            <div id="day-cash-report-text">일간 거래 내역</div>
-            <div id="day-cash-report"></div>
-        </div>
-
-        <div id="day-cash-inpormation">
             <div id="day-cash-report-text">월 수입/지출 요약</div>
             <div id="month-cash-report">
                 <div id="month-cash-total-income" class="month-cash-report-div">
