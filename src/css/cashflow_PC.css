@@ -5,22 +5,23 @@
     background-color: #fdfce5;
 
     display: flex;
+    padding-left: 400px; /*왼쪽 메뉴 공간확보*/
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
   }
 
   /* 폼 박스 */
   .content {
     background-color: #fef7d1;
     border: 2px solid rgba(187, 170, 187, 0.6706);
-    margin-left: auto; /* 오른쪽에 정렬 */
-    margin-top: 10vh; /* 원하는 위치로 조정 */
-    margin-left: 5vw; /* 여백 조정 */
-    margin-right: 5vw;
+
+    margin-top: 10px; /* 원하는 위치로 조정 */
+
     padding: 3vh 3vw;
     border-radius: 30px;
     width: 50vw;
-
+    max-width: 1400px;
     height: 75vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -73,13 +74,20 @@
   .form-group input,
   .form-group select {
     width: 100%;
-    padding: 0.6rem;
+    padding: 0.5rem;
     background-color: transparent;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     border: none;
     border-bottom: 2px solid #cccccc;
     box-sizing: border-box;
+  }
+
+  .date-input {
+    width: 5rem;
+    height: 2rem;
+    font-size: 20px;
+    padding: 20px;
   }
 
   .submit-button {
