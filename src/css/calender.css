@@ -1,0 +1,72 @@
+#calender {
+    width: 1360px;
+    height: 933px;
+    margin: 27px 25px 27px 150px;
+}
+
+#calender-title {
+    font-family: "ltim";
+    font-size: 30px;
+    width: 1360px;
+    height: 45px;
+    text-align: center;
+    background-color: #ffeb60;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+table {
+    font-family: "ltim";
+    display: block;
+    width: 1360px;
+    height: 933px;
+    border-collapse: collapse;
+    background-color: #fffce9;
+}
+
+thead tr {
+    height: 58px;
+}
+tbody tr {
+    height: 175px;
+}
+
+#weekname-row {
+    height: 58px;
+}
+
+#weekname-col {
+    width: 194px;
+    border: solid 1px;
+    border-color: #7e72201a;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#day-row {
+    height: 175px;
+}
+
+#day-col {
+    border: solid 1px;
+    border-color: #7e72201a;
+    width: 194px;
+    vertical-align: top;
+    font-size: 36px;
+}
+
+#today {
+    border-radius: 20px;
+    background-color: #0b036b;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.sunday {
+    color: #ff0000;
+}
+
+.saturday {
+    color: #0022ff;
+}
