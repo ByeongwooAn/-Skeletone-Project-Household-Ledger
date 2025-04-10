@@ -1,6 +1,7 @@
 <script setup>
 import "../css/mainview.css";
 import { RouterLink } from "vue-router";
+import DoughnutChart from "./cashmonth/DoughnutChart.vue";
 </script>
 
 <template>
@@ -18,7 +19,10 @@ import { RouterLink } from "vue-router";
             <div id="recent-deal">4월 총 지출</div>
         </div>
 
-        <div id="main-attribute-div3"></div>
+        <div id="main-attribute-div3">
+            <div>월간 수입/지출 비율</div>
+            <div id="doughnutchart-div"><DoughnutChart /></div>
+        </div>
 
         <div id="main-attribute-div4">
             <RouterLink to="/cashflow">새 거래 내역 추가 +</RouterLink>
