@@ -1,6 +1,6 @@
 #calender {
     width: 1360px;
-    height: 933px;
+    height: 978px;
     margin: 27px 25px 27px 25px;
 }
 
@@ -72,6 +72,49 @@ tbody tr {
 }
 
 #day-income-text {
+    margin-top: 30px;
+    margin-left: 10px;
+    vertical-align: bottom;
+    color: #60a5fa;
+    font-size: 20px;
+}
+
+#day-expense-text {
+    margin-top: 5px;
+    margin-left: 10px;
+    vertical-align: bottom;
+    color: #f87171;
+    font-size: 20px;
+}
+
+#day-cash-inpormation {
+    width: 1360px;
+    height: 465px;
+    background-color: #fef7d1;
+    margin-top: 27px;
+    margin-left: 25px;
+    border-radius: 20px;
+}
+
+#day-cash-report-text {
+    margin-left: 15px;
+    padding-top: 15px;
+    font-family: "Black Han Sans";
+    font-size: 36px;
+}
+
+#month-cash-total-income {
+    font-family: "lim";
+    color: #60a5fa;
+}
+
+#month-cash-total-expense {
+    color: #f87171;
+    font-family: "lim";
+}
+
+#month-cash-result {
+    font-family: "lim";
 }
 
 @media (max-width: 394px) {
