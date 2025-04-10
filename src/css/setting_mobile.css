@@ -33,6 +33,13 @@ h2 {
   font-weight: bold;
   margin-bottom: 20px;
 }
+body.dark-mode h2 {
+  font-family: 'Black Han Sans';
+  color: #ffeb60;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
 /* 프로필 사진 */
 .profile-pic {
