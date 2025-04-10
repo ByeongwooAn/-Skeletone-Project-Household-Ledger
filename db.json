@@ -106,9 +106,9 @@
       "name": "홍길동",
       "nickname": "홍",
       "email": "123@ㅜㅁㅍㄷㄱ.채ㅡ",
-      "mode": "light",
-      "themeColor": "Orange",
-      "fontSetting": "Do hyeon"
+      "mode": "dark",
+      "themeColor": "Basic",
+      "fontSetting": "Black Han Sans"
     }
   ]
 }
