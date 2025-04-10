@@ -162,13 +162,16 @@ function selectDate(day) {
         <div id="day-cash-inpormation">
             <div id="day-cash-report-text">월 수입/지출 요약</div>
             <div id="month-cash-report">
-                <div id="month-cash-total-income">
+                <div id="month-cash-total-income" class="month-cash-report-div">
                     총 수입: {{ incomeTotal.toLocaleString() }}원
                 </div>
-                <div id="month-cash-total-expense">
+                <div
+                    id="month-cash-total-expense"
+                    class="month-cash-report-div"
+                >
                     총 지출: {{ expenseTotal.toLocaleString() }}원
                 </div>
-                <div id="month-cash-result">
+                <div id="month-cash-result" class="month-cash-report-div">
                     순이익:
                     {{ (incomeTotal - expenseTotal).toLocaleString() }}원
                 </div>

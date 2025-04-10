@@ -103,18 +103,33 @@ tbody tr {
     font-size: 36px;
 }
 
+.month-cash-report-div {
+    text-align: center;
+    width: 1303px;
+    height: 72px;
+    background-color: #fffefa;
+    border-radius: 10px;
+    margin-left: 29px;
+}
+
 #month-cash-total-income {
-    font-family: "lim";
+    font-family: "ltim";
     color: #60a5fa;
+    font-size: 36px;
+    margin-top: 51px;
 }
 
 #month-cash-total-expense {
     color: #f87171;
-    font-family: "lim";
+    font-family: "ltim";
+    font-size: 36px;
+    margin-top: 19px;
 }
 
 #month-cash-result {
-    font-family: "lim";
+    font-family: "ltim";
+    font-size: 36px;
+    margin-top: 19px;
 }
 
 @media (max-width: 394px) {
