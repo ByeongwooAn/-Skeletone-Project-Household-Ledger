@@ -1,15 +1,25 @@
 <template>
   <div class="app">
     <h2>지출 통계</h2>
+    <br />
+    <!--모바일 날짜 -->
+    <div class="mobile-date-selector">
+      <DateSelector :year="selectedYear" :month="selectedMonth" @changeMonth="changeMonth" />
+    </div>
+
     <div class="chart-summary-container">
       <!--chart 공간-->
       <div class="chart-area"></div>
 
       <!--날짜 바, 총액, 카테고리별 요약 배경 상자-->
       <div class="summary-box">
-        <!--날짜-->
-        <DateSelector :year="selectedYear" :month="selectedMonth" @changeMonth="changeMonth" />
-        <!--수입 총액-->
+        <!--PC 날짜-->
+        <DateSelector
+          class="desktop-date-selector"
+          :year="selectedYear"
+          :month="selectedMonth"
+          @changeMonth="changeMonth"
+        /><!--수입 총액-->
         <TotalCard :total="totalExpense" />
         <!--카테고리별 요약-->
         <SummaryCard
@@ -30,6 +40,7 @@
         :date="item.date"
         :category="item.category"
         :amount="item.amount"
+        :memo="item.memo"
       />
     </div>
   </div>
@@ -65,13 +76,13 @@ const changeMonth = (offset) => {
 };
 
 // 데이터 로딩
-const transactions = ref([]);
+const cashflows = ref([]);
 
 onMounted(async () => {
   try {
-    const res = await axios.get('http://localhost:3000/transactions');
-    transactions.value = res.data;
-    console.log('불러온 데이터:', transactions.value);
+    const res = await axios.get('http://localhost:3000/cashflows');
+    cashflows.value = res.data;
+    console.log('불러온 데이터:', cashflows.value);
   } catch (err) {
     console.error('데이터 불러오기 실패:', err);
   }
@@ -79,7 +90,7 @@ onMounted(async () => {
 
 // 필터링 및 통계 계산
 const filteredExpense = computed(() => {
-  return transactions.value.filter((item) => {
+  return cashflows.value.filter((item) => {
     const date = new Date(item.date);
     return (
       item.type === 'expense' &&

@@ -1,12 +1,8 @@
 .container {
-    position: relative;
-    width: 1155px;
-    max-width: 95%;
-    margin: 0 auto;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 16px;
-    transform: translateY(50%);
+  margin: 300px;
+
+  min-width: 600px;
+
   }
   /* 헤더 영역 */
   .headers{
@@ -80,6 +76,12 @@
     
   }
   
+  .tab.active .incomeAmount{
+    color: green;
+  }
+  .tab.active .expenseAmount{
+    color: red;
+  }
   
   
   /* 테이블 영역 */
@@ -113,42 +115,21 @@
   }
   
   /* 반응형: 화면 너비 줄어들 때 */
-  @media (max-width: 1200px) {
-    .container {
-      width: 90%;
-    }
-  }
   
-  @media (max-width: 768px) {
-    .container {
-      width: 95%;
-      padding: 16px;
-    }
-  
-    .tabs {
-  
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .table-header,
-    .table-row {
-      grid-template-columns: 1fr 2fr 2fr 2fr 3fr;
-    }
-  }
-  
-  @media (max-width: 480px) {
+  /* 최대 400px까지 이 미디어쿼리를 적용 */
+  @media (max-width: 393px) {
     .container {
       width: 100%;
+      min-width: 393px;
+      margin-top: 70px;
+      margin-left:0;
       padding: 12px;
+      
     }
   
     .tabs {
       gap: 8px;
     }
   
-    .table-header,
-    .table-row {
-      grid-template-rows: 1fr 2fr 2fr;
-    }
+    
   }
