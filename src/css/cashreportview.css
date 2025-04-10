@@ -1,12 +1,5 @@
 .container {
-    position: relative;
-    width: 1155px;
-    max-width: 95%;
-    margin: 0 auto;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 16px;
-    transform: translateY(50%);
+  margin: 20px;
   }
   /* 헤더 영역 */
   .headers{
@@ -113,42 +106,20 @@
   }
   
   /* 반응형: 화면 너비 줄어들 때 */
-  @media (max-width: 1200px) {
-    .container {
-      width: 90%;
-    }
-  }
   
-  @media (max-width: 768px) {
-    .container {
-      width: 95%;
-      padding: 16px;
-    }
   
-    .tabs {
-  
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .table-header,
-    .table-row {
-      grid-template-columns: 1fr 2fr 2fr 2fr 3fr;
-    }
-  }
-  
-  @media (max-width: 480px) {
+  @media (max-width: 400px) {
     .container {
       width: 100%;
+      min-width: 396px;;
+      margin-top: 70px;
       padding: 12px;
+      
     }
   
     .tabs {
       gap: 8px;
     }
   
-    .table-header,
-    .table-row {
-      grid-template-rows: 1fr 2fr 2fr;
-    }
+    
   }
