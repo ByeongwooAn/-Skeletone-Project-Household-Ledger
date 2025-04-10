@@ -1,7 +1,7 @@
 .container {
   margin: 300px;
 
-  min-width: 600px;
+  
 
   }
   /* 헤더 영역 */
@@ -94,7 +94,7 @@
   .table-header,
   .table-row {
     display: grid;
-    grid-template-columns: 40px 1fr 1fr 1fr 2fr;
+    grid-template-columns: 40px 1fr 1fr 1fr 2fr 40px;
     align-items: center;
     padding: 8px;
     border-bottom: 1px solid #ddd;
