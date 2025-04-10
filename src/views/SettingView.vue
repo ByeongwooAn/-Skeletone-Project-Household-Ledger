@@ -1,3 +1,3 @@
 <template>
-    <h1>설정 화면</h1>
+  <h1>설정 화면</h1>
 </template>
