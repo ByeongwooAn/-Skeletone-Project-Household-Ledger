@@ -230,7 +230,7 @@
   .detail-card span {
     margin-bottom: 0.3rem;
   }
-  /*수입/지출 내역 단어 단위별 줄바꿈*/
+  /*수입/지출단어 단위별 줄바꿈*/
   .detail-card .detail-category {
     word-break: keep-all;
     white-space: normal;
