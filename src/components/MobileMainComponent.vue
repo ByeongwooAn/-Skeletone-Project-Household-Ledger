@@ -1,7 +1,36 @@
 <script setup>
 import "../css/mainviewmobile.css";
+import { ref, onMounted } from "vue";
 import { RouterLink } from "vue-router";
 import DoughnutChart from "./cashmonth/DoughnutChart.vue";
+import parseAndSortCashflows from "@/function/sortList";
+import ApiService from "@/function/apiService";
+
+// ref로 상태 선언
+const list = ref([]);
+const incomeTotal = ref(0);
+const expenseTotal = ref(0);
+
+// API 호출 함수
+async function getTypeTotal(type) {
+    try {
+        const res = await ApiService.getTypes(type);
+        return res.data.reduce((sum, item) => sum + item.amount, 0);
+    } catch (err) {
+        console.error(`${type} 불러오기 실패`, err);
+        return 0;
+    }
+}
+
+// 컴포넌트 로딩 시 호출
+onMounted(async () => {
+    const res = await fetch("/db.json");
+    const json = await res.json();
+
+    list.value = parseAndSortCashflows(json);
+    incomeTotal.value = await getTypeTotal("income");
+    expenseTotal.value = await getTypeTotal("expense");
+});
 </script>
 
 <template>
@@ -11,10 +40,10 @@ import DoughnutChart from "./cashmonth/DoughnutChart.vue";
                 4월 수입 지출 총액
             </div>
             <div id="mobile-main-adttribute1" class="mobile-main-attribute-div">
-                수입 총액
+                총 수입: {{ incomeTotal.toLocaleString() }}원
             </div>
             <div id="mobile-main-adttribute2" class="mobile-main-attribute-div">
-                지출 총액
+                총 지출: {{ expenseTotal.toLocaleString() }}원
             </div>
         </div>
         <div id="mobile-main-div2" class="mobile-mainview-div">
@@ -30,32 +59,11 @@ import DoughnutChart from "./cashmonth/DoughnutChart.vue";
             <div
                 id="mobile-main-deal-report1"
                 class="mobile-main-attribute-div"
+                v-for="item in list.slice(0, 4)"
+                :key="item.id"
             >
-                거래 내역1
-            </div>
-            <div
-                id="mobile-main-deal-report2"
-                class="mobile-main-attribute-div"
-            >
-                거래 내역2
-            </div>
-            <div
-                id="mobile-main-deal-report3"
-                class="mobile-main-attribute-div"
-            >
-                거래 내역3
-            </div>
-            <div
-                id="mobile-main-deal-report4"
-                class="mobile-main-attribute-div"
-            >
-                거래 내역4
-            </div>
-            <div
-                id="mobile-main-deal-report5"
-                class="mobile-main-attribute-div"
-            >
-                거래 내역5
+                {{ item.date }} | {{ item.type }} | {{ item.category }} |
+                {{ item.amount.toLocaleString() }}원
             </div>
         </div>
         <RouterLink to="/cashflow"
