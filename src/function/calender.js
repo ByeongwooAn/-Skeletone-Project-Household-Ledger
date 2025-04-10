@@ -30,7 +30,7 @@ function getEndOfDay(year, month) {
 function getStartWeek(targetYear, targetMonth, rootYear, rootDayOfWeekIndex) {
     let year = rootYear;
     let month = 1;
-    let sumOfDay = rootDayOfWeekIndex;
+    let sumOfDay = (rootDayOfWeekIndex = 5);
 
     while (true) {
         if (targetYear > year) {
@@ -60,15 +60,7 @@ function isToday(year, month, day) {
 
 // ✅ Composition API 로직 추출
 export function useCalendar() {
-    const weekNames = [
-        "월요일",
-        "화요일",
-        "수요일",
-        "목요일",
-        "금요일",
-        "토요일",
-        "일요일",
-    ];
+    const weekNames = ["일", "월", "화", "수", "목", "금", "토"];
     const rootYear = 1904;
     const rootDayOfWeekIndex = 4;
 
@@ -92,8 +84,9 @@ export function useCalendar() {
     function initCalendar() {
         currentCalendarMatrix.value = [];
         let day = 1;
+        let isFinished = false;
 
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 6 && !isFinished; i++) {
             let calendarRow = [];
             for (let j = 0; j < 7; j++) {
                 if (i === 0 && j < currentMonthStartWeekIndex.value) {
@@ -102,6 +95,7 @@ export function useCalendar() {
                     calendarRow.push(day++);
                 } else {
                     calendarRow.push("");
+                    isFinished = true; // 마지막 날짜 이후엔 루프 종료 표시
                 }
             }
             currentCalendarMatrix.value.push(calendarRow);

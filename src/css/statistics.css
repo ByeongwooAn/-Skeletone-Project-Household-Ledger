@@ -1,194 +1,193 @@
 /* 공통 레이아웃 */
 .cash-statistics-view {
-  background-color: #fffde7;
-  padding: 1rem;
-  margin-left: 270px;
-  min-height: 100vh;
-  box-sizing: border-box;
+    background-color: #fffde7;
+    padding: 1rem;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 /* 제목 */
 .title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 /* 탭 메뉴 */
 .tab-menu {
-  display: flex;
-  margin-bottom: 1rem;
+    display: flex;
+    margin-bottom: 1rem;
 }
 
 .tab-menu .tab {
-  padding: 0.5rem 1rem;
-  background-color: #fef9c4;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  margin-right: 0.5rem;
-  border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #fef9c4;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .tab-menu .tab.active {
-  background-color: #ffeb60;
-  border-bottom: 2px solid #fdd835;
+    background-color: #ffeb60;
+    border-bottom: 2px solid #fdd835;
 }
 
 /* 차트 + 요약 박스 */
 .chart-summary-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 /* 차트 영역 */
 .chart-area {
-  flex: 1;
-  min-width: 300px;
-  height: 300px;
-  background-color: #f5f5f5;
-  border-radius: 1rem;
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    background-color: #f5f5f5;
+    border-radius: 1rem;
 }
 
 /* 요약 카드 박스 */
 .summary-box {
-  flex: 1;
-  min-width: 295px;
-  background-color: #fff8c6;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 295px;
+    background-color: #fff8c6;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* 날짜 선택 */
 .date-selector {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .date-selector button {
-  background-color: #fdd835;
-  border: none;
-  border-radius: 50%;
-  padding: 0.3rem 0.6rem;
-  font-size: 1rem;
-  cursor: pointer;
+    background-color: #fdd835;
+    border: none;
+    border-radius: 50%;
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 /* 총합 카드 */
 .card-total {
-  background-color: #fff;
-  padding: 0.8rem;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1rem;
+    background-color: #fff;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 /* 요약 카드 */
 .card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  padding: 0.8rem 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .category-with-icon {
-  display: flex;
-  align-items: center;
-  flex: 1;
+    display: flex;
+    align-items: center;
+    flex: 1;
 }
 
 .icon-wrapper {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  margin-right: 0.5rem;
-  flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
 }
 
 .card .category {
-  font-weight: bold;
-  flex: 1;
+    font-weight: bold;
+    flex: 1;
 }
 
 .card .percent {
-  flex: 1;
-  text-align: right;
-  color: gray;
+    flex: 1;
+    text-align: right;
+    color: gray;
 }
 
 .card .amount {
-  flex: 1;
-  text-align: right;
-  font-weight: bold;
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
 }
 
 /* 디테일 리스트 */
 .details-list {
-  margin-top: 3rem;
+    margin-top: 3rem;
 }
 
 .detail-card {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.8rem 2rem;
-  background-color: #fff;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+    background-color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .detail-card .detail-date,
 .detail-card .detail-category,
 .detail-card .detail-amount {
-  flex: 1;
-  font-size: 0.95rem;
+    flex: 1;
+    font-size: 0.95rem;
 }
 
 /* 모바일 버전 */
 @media (max-width: 768px) {
-  .cash-statistics-view {
-    margin-left: 0;
-  }
-  .chart-summary-container {
-    flex-direction: column;
-  }
+    .cash-statistics-view {
+        margin-left: 0;
+    }
+    .chart-summary-container {
+        flex-direction: column;
+    }
 
-  .chart-area,
-  .summary-box {
-    width: 325px;
-  }
+    .chart-area,
+    .summary-box {
+        width: 325px;
+    }
 
-  .tab-menu {
-    flex-direction: row;
-  }
+    .tab-menu {
+        flex-direction: row;
+    }
 
-  .tab {
-    margin-bottom: 0.5rem;
-  }
+    .tab {
+        margin-bottom: 0.5rem;
+    }
 
-  .detail-card {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+    .detail-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
-  .detail-card span {
-    margin-bottom: 0.3rem;
-  }
+    .detail-card span {
+        margin-bottom: 0.3rem;
+    }
 }
