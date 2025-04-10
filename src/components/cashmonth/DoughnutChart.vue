@@ -1,4 +1,5 @@
 <script setup>
+import ApiService from "@/function/apiService";
 import { Doughnut } from "vue-chartjs";
 import {
     Chart as ChartJS,
@@ -7,17 +8,27 @@ import {
     Legend,
     ArcElement,
     CategoryScale,
-    plugins,
 } from "chart.js";
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
+
+ApiService.getTypes("income")
+    .then((res) => {
+        console.log("응답 데이터: ", res.data);
+    })
+    .catch((err) => {
+        console.error("에러 발생: ", err);
+    });
+
+let income = 60;
+let expense = 40;
 
 const chartData = {
     labels: ["수입", "지출"],
     datasets: [
         {
             label: "My Dataset",
-            data: [60, 40],
+            data: [income, expense],
             backgroundColor: ["#60a5fa", "#f87171"],
             hoverOffset: 10,
         },

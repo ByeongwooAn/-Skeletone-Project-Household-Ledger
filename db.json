@@ -17,12 +17,60 @@
       "memo": "!!"
     },
     {
-      "id": 1,
+      "id": "3",
       "type": "income",
       "date": "2025-04-10",
       "amount": 250000,
       "category": "💰부수입",
       "memo": "용돈"
+    },
+    {
+      "id": "4",
+      "type": "income",
+      "date": "2025-04-10",
+      "amount": 3000000,
+      "category": "💵주수입",
+      "memo": "월급"
+    },
+    {
+      "id": "5",
+      "type": "income",
+      "date": "2025-04-10",
+      "amount": 500,
+      "category": "🤑기타",
+      "memo": "캐쉬백"
+    },
+    {
+      "id": "6",
+      "type": "income",
+      "date": "2025-04-10",
+      "amount": 2000,
+      "category": "🤑기타",
+      "memo": "마일리지"
+    },
+    {
+      "id": "7",
+      "type": "expense",
+      "date": "2025-04-10",
+      "amount": 100000,
+      "category": "🛒쇼핑",
+      "memo": "장보기"
+    },
+    {
+      "id": "8",
+      "type": "expense",
+      "date": "2025-04-10",
+      "amount": 50000,
+      "category": "🛒쇼핑",
+      "memo": "옷사기"
+    },
+    {
+      "id": "9",
+      "type": "expense",
+      "date": "2025-04-10",
+      "amount": 500000,
+      "category": "🏠주거",
+      "memo": "월세"
     }
   ]
 }
