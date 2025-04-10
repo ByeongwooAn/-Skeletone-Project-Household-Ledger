@@ -36,7 +36,6 @@ const saveSettings = async () => {
 };
 </script>
 <template>
-  <<<<<<< HEAD
   <!-- 컴포넌트 전체를 감싸는 페이지 -->
   <div class="page-wrapper">
     <!-- 개인정보 카드 -->

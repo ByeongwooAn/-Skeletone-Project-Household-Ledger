@@ -2,7 +2,6 @@
   "cashflows": [
     {
       "id": "1",
-
       "type": "income",
       "date": "2025-04-17",
       "amount": 2000,
@@ -25,7 +24,6 @@
       "date": "2025-04-17",
       "amount": 2000,
       "category": "💰부수입",
-
       "memo": "타임 스탬프 테스트",
       "createdAt": "2025-04-10T13:41:10.613Z"
     },
@@ -57,7 +55,7 @@
       "createdAt": "2025-04-10T16:44:18.073Z"
     },
     {
-      "id": 7,
+      "id": "7",
       "type": "income",
       "date": "2025-04-17",
       "amount": 250000,
@@ -65,7 +63,7 @@
       "memo": "타임스탬프 더미 데이터"
     },
     {
-      "id": 8,
+      "id": "8",
       "type": "income",
       "date": "2025-04-17",
       "amount": 90000,
@@ -77,12 +75,12 @@
   "userInfo": [
     {
       "id": "1",
-      "name": "홍길동",
-      "nickname": "홍",
-      "email": "123@ㅜㅁㅍㄷㄱ.채ㅡ",
-      "mode": "dark",
-      "themeColor": "Orange",
-      "fontSetting": "Sunflower"
+      "name": "가나다",
+      "nickname": "가나초코",
+      "email": "kanada@naver.com",
+      "mode": "light",
+      "themeColor": "Basic",
+      "fontSetting": "Black Han Sans"
     }
   ]
 }
