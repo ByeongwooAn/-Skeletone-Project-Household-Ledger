@@ -1,52 +1,20 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "type": "income",
-            "date": "2025-04-01",
-            "category": "주수입",
-            "amount": 2000000,
-            "memo": "메모"
-        },
-        {
-            "id": 2,
-            "type": "expense",
-            "date": "2025-04-05",
-            "category": "식비",
-            "amount": 25000,
-            "memo": "메모"
-        },
-        {
-            "id": 3,
-            "type": "income",
-            "date": "2025-04-07",
-            "category": "기타",
-            "amount": 100000,
-            "memo": "메모"
-        },
-        {
-            "id": 4,
-            "type": "income",
-            "date": "2025-04-10",
-            "category": "부수입",
-            "amount": 300000,
-            "memo": "메모"
-        },
-        {
-            "id": 5,
-            "type": "expense",
-            "date": "2025-04-12",
-            "category": "쇼핑",
-            "amount": 50000,
-            "memo": "메모"
-        },
-        {
-            "id": 6,
-            "type": "expense",
-            "date": "2025-04-15",
-            "category": "건강/의료",
-            "amount": 100000,
-            "memo": "메모"
-        }
-    ]
+  "cashflows": [
+    {
+      "id": 1,
+      "type": "expense",
+      "date": "2025-04-14",
+      "amount": 20000,
+      "category": "🚗교통",
+      "memo": "됐나?!!"
+    },
+    {
+      "id": 2,
+      "type": "income",
+      "date": "2025-04-09",
+      "amount": 23000,
+      "category": "💰부수입",
+      "memo": "!!"
+    }
+  ]
 }

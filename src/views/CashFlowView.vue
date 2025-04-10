@@ -1,6 +1,7 @@
 <script setup>
 import { ref, reactive, computed } from 'vue';
 import categoryData from '../stores/categorydata.js';
+import axios from 'axios';
 import '../css/cashflow_PC.css';
 import '../css/cashflow_mobile.css';
 
@@ -24,8 +25,18 @@ const setType = (newType) => {
   form.type = newType;
 };
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
   form.id = nextId.value;
+  try {
+    await axios.post('http://localhost:3001/cashflows', { ...form });
+    console.log('저장 성공!');
+    form.date = '';
+    form.amount = 0;
+    form.category = '';
+    form.memo = '';
+  } catch (error) {
+    console.error('저장 실패:', error);
+  }
   console.log('수입/지출내역 저장됨', { ...form });
   nextId.value += 1;
 };
