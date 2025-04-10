@@ -22,8 +22,6 @@ const handleClick = () => {
   
   <style scoped>
 
-  
-  
   .circle-button {
     width: 100px;
     height: 100px;
