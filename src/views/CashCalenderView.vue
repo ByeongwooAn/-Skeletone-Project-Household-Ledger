@@ -1,3 +1,7 @@
+<script setup>
+import Calender from "@/components/cashmonth/Calender.vue";
+</script>
+
 <template>
-    <h1>월간 요약 달력</h1>
+    <Calender />
 </template>

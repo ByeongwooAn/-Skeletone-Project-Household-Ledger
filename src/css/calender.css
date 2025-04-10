@@ -1,0 +1,13 @@
+.rounded {
+    border-radius: 20px;
+    border: solid 1px #ffffff;
+    background-color: #2b6bd1;
+    padding: 10px;
+    color: #ffffff;
+}
+.calender {
+    background-color: blue;
+    justify-items: center;
+    text-align: center;
+    align-content: center;
+}
