@@ -18,7 +18,7 @@
       <form @submit.prevent="handleSubmit">
         <div class="form-group">
           <label>날짜</label>
-          <input type="date" v-model="form.date" />
+          <input type="date" v-model="form.date" class="date-input" />
         </div>
         <div class="form-group">
           <label>금액</label>
@@ -35,7 +35,7 @@
         </div>
         <div class="form-group">
           <label>메모</label>
-          <input type="text" v-model="form.memo" placeholder="메모를 입력하세요" />
+          <input type="text" v-model="form.memo" placeholder="메모를 입력하세요"></input>
         </div>
         <button class="submit-button" type="submit">저장</button>
       </form>
