@@ -41,11 +41,13 @@
     <div class="table">
       <!-- 테이블 헤더 -->
       <div class="table-header">
-        <div><input type="checkbox" /></div>
-        <div>날짜</div>
+        <div><span>날짜</span></div>
         <div>카테고리</div>
         <div>금액</div>
         <div>내용</div>
+        <div><button class="delete-all-btn" @click="deleteAllItems()">
+    전체 삭제
+  </button></div>
       </div>
 
       <!-- 테이블 바디 -->
@@ -54,26 +56,30 @@
         :key="index"
         class="table-row"
       >
-        <div><input type="checkbox" /></div>
+
         <div>{{ item.date }}</div>
         <div>{{ item.category }}</div>
         <div :class="['amount', item.type === '수입' ? 'plus' : 'minus']">
           {{ formatCurrency(item.amount) }}
         </div>
         <div>{{ item.memo }}</div>
-        <div>삭제버튼</div>
+        <div><TrashComponent @click="deleteItem(item.id)"/></div>
       </div>
     </div>
    
-    <addButton/>
+    <AddButton/>
   </div>
 
 </template>
 
 <script setup>
-import addButton from '@/components/addButton.vue';
+
+import AddButton from '@/components/AddButton.vue';
+import TrashComponent from '@/components/TrashComponent.vue';
 import '@/css/cashreportview.css';
 import { ref, computed, onMounted } from "vue";
+import axios from 'axios';
+
 
 // 헤더 영역
 
@@ -137,26 +143,79 @@ const filteredList = computed(() => {
   });
 });
 
-//거래내역 개수 카운트 
-const totalCount = computed(() => list.value.length);
 
-const incomeCount = computed(() =>
-  list.value.filter(item => item.type === "수입").length
-);
+const deleteItem = async (id) =>{
+  try{
+    await axios.delete(`http://localhost:3001/cashflows/${id}`);
+    list.value=list.value.filter(item=>item.id!==id); //삭제한 id를 제외한 배열 재생성
+    console.log(`id ${id} 항목 삭제됨`);
+  }
+  catch(error){
+    console.error('단건 삭제 오류',error);
+  }
+}
 
-const expenseCount = computed(() =>
-  list.value.filter(item => item.type === "지출").length
-);
+const deleteAllItems = async () => {
+  const confirmed = window.confirm("정말 전체 삭제하시겠습니까?");
+  if (!confirmed) return;
+
+  try {
+    const res = await axios.get("http://localhost:3001/cashflows");
+    const items = res.data;
+
+    await Promise.all(
+      items.map(item =>
+        axios.delete(`http://localhost:3001/cashflows/${item.id}`)
+      )
+    );
+
+    list.value = [];
+    console.log("전체 삭제 완료");
+  } catch (error) {
+    console.error("전체 삭제 오류", error);
+  }
+};
+
+
+
 
 //거래내역 금액 카운트
+const listByMonth = computed(() => {
+  const monthStr = currentMonth.value;
+  return list.value.filter(item => item.date?.startsWith(monthStr));
+});
+
+// 전체 거래 개수 
+const totalCount = computed(() => listByMonth.value.length);
+
+// 수입 개수 
+const incomeCount = computed(() =>
+  listByMonth.value.filter(item => item.type === "수입").length
+);
+
+// 지출 개수 
+const expenseCount = computed(() =>
+  listByMonth.value.filter(item => item.type === "지출").length
+);
+
+
+// 전체 금액 
 const totalAmount = computed(() =>
-  list.value.reduce((sum, item) => sum + item.amount, 0)
+  listByMonth.value.reduce((sum, item) => sum + item.amount, 0)
 );
+
+// 수입만 필터링
 const incomeAmount = computed(() =>
-  list.value.filter(item => item.type==="수입").reduce((sum, item)=> sum+item.amount,0)
+  listByMonth.value
+    .filter(item => item.type === "수입")
+    .reduce((sum, item) => sum + item.amount, 0)
 );
+
+// 지출만 필터링
 const expenseAmount = computed(() =>
-  list.value.filter(item=>item.type==="지출").reduce((sum,item)=>sum+item.amount,0)
+  listByMonth.value
+    .filter(item => item.type === "지출")
+    .reduce((sum, item) => sum + item.amount, 0)
 );
 
 //원화 포맷팅
@@ -164,9 +223,5 @@ const formatCurrency = (amount) => {
   return amount.toLocaleString() + "원";
 };
 
-//추가 버튼 클릭시 페이지 이동
-const goToAddPage=()=>{
-  router.push('/cashflow');
-}
 </script>
 
