@@ -1,9 +1,13 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useCalendar } from "@/function/calender.js";
+import ApiService from "@/function/apiService";
 import "../../css/calender.css";
 
 const cashflowsByDate = ref({});
+const selectedDate = ref(null);
+const incomeTotal = ref(0);
+const expenseTotal = ref(0);
 
 const {
     weekNames,
@@ -16,6 +20,17 @@ const {
     isToday,
 } = useCalendar();
 
+// API 호출 함수
+async function getTypeTotal(type) {
+    try {
+        const res = await ApiService.getTypes(type);
+        return res.data.reduce((sum, item) => sum + item.amount, 0);
+    } catch (err) {
+        console.error(`${type} 불러오기 실패`, err);
+        return 0;
+    }
+}
+
 onMounted(async () => {
     init();
 
@@ -23,6 +38,9 @@ onMounted(async () => {
     const data = await res.json();
 
     const grouped = {};
+
+    incomeTotal.value = await getTypeTotal("income");
+    expenseTotal.value = await getTypeTotal("expense");
 
     data.cashflows.forEach((item) => {
         const date = item.date;
@@ -34,6 +52,14 @@ onMounted(async () => {
 
     cashflowsByDate.value = grouped;
 });
+
+function selectDate(day) {
+    const date = `${currentYear}-${String(currentMonth + 1).padStart(
+        2,
+        "0"
+    )}-${String(day).padStart(2, "0")}`;
+    selectedDate.value = date;
+}
 </script>
 
 <template>
@@ -73,6 +99,7 @@ onMounted(async () => {
                             sunday: colIndex === 0,
                             saturday: colIndex === 6,
                         }"
+                        @click="() => day !== 0 && selectDate(day)"
                     >
                         <div>
                             <span
@@ -95,7 +122,7 @@ onMounted(async () => {
                                 ]
                             "
                         >
-                            <div style="color: red">
+                            <div id="day-income-text">
                                 -
                                 {{
                                     cashflowsByDate[
@@ -107,7 +134,7 @@ onMounted(async () => {
                                     ].expense.toLocaleString()
                                 }}
                             </div>
-                            <div style="color: blue">
+                            <div id="day-expense-text">
                                 +
                                 {{
                                     cashflowsByDate[
@@ -124,5 +151,28 @@ onMounted(async () => {
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <div>
+        <div id="day-cash-inpormation">
+            <div id="day-cash-report-text">일간 거래 내역</div>
+            <div id="day-cash-report"></div>
+        </div>
+
+        <div id="day-cash-inpormation">
+            <div id="day-cash-report-text">월 수입/지출 요약</div>
+            <div id="month-cash-report">
+                <div id="month-cash-total-income">
+                    총 수입: {{ incomeTotal.toLocaleString() }}원
+                </div>
+                <div id="month-cash-total-expense">
+                    총 지출: {{ expenseTotal.toLocaleString() }}원
+                </div>
+                <div id="month-cash-result">
+                    순이익:
+                    {{ (incomeTotal - expenseTotal).toLocaleString() }}원
+                </div>
+            </div>
+        </div>
     </div>
 </template>
