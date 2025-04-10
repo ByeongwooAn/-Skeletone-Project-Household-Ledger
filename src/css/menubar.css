@@ -1,37 +1,46 @@
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 a:visited {
-    color: inherit;
+  color: inherit;
 }
 
 #menu {
-    width: 270px;
-    height: 100vh;
-    background-color: #ffeb60;
-    font-family: "Black Han Sans";
-    font-size: 32px;
-    color: #0b036b;
+  width: 270px;
+  height: 100vh;
+  background-color: #ffeb60;
+  font-family: 'Black Han Sans';
+  font-size: 32px;
+  color: #0b036b;
 }
 
 #menu > div {
-    width: 270px;
-    height: 100px;
-    padding-top: 20px;
-    text-align: center;
+  width: 270px;
+  height: 100px;
+  padding-top: 20px;
+  text-align: center;
 }
 
 #cashmonth-div:hover #cashmonth-div-child {
-    display: block;
+  display: block;
 }
 
 #cashmonth-div-child {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-    font-size: 20px;
-    display: none;
-    padding-right: 67px;
-    color: #5d5d5d;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  display: none;
+  padding-right: 67px;
+  color: #5d5d5d;
+}
+
+/* 다크 모드용 메뉴바 스타일 */
+body.dark-mode #menu {
+  background-color: #090254; /* 어두운 배경 */
+  color: #ffeb60; /* 텍스트 색상도 밝게 */
+}
+
+body.dark-mode #cashmonth-div-child {
+  color: #bbbbbb; /* 서브 메뉴 텍스트도 밝게 조정 */
 }

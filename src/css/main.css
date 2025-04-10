@@ -7,10 +7,12 @@ body {
     background-color: #feffed;
 }
 
+body.dark-mode {
+    background-color: #2b2761;
+}
+
 #container {
     display: flex;
-    justify-items: center;
-    align-content: center;
 }
 
 #page-rendering-div {

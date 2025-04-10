@@ -13,6 +13,7 @@
 }
 
 @font-face {
+<<<<<<< HEAD
     font-family: "Do Hyeon";
     font-weight: 400;
     font-style: normal;
@@ -22,4 +23,19 @@
     font-family: "Sunflower", sans-serif;
     font-weight: 300;
     font-style: normal;
+=======
+  font-family: "Do Hyeon";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../asset/font/DoHyeon-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sunflower", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  src: url("../asset/font/Sunflower-Bold.ttf")
+  url("../asset/font/Sunflower-Light.ttf")
+  url("../asset/font/Sunflower-Medium.ttf") format("truetype");
+>>>>>>> 8c6b3126e8ed03e0b179687741e18257085ecd75
 }
