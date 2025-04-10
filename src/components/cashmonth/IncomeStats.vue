@@ -30,6 +30,7 @@
         :date="item.date"
         :category="item.category"
         :amount="item.amount"
+        :memo="item.memo"
       />
     </div>
   </div>
