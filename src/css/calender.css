@@ -99,7 +99,7 @@ tbody tr {
 #day-cash-report-text {
     margin-left: 15px;
     padding-top: 15px;
-    font-family: "Black Han Sans";
+    font-family: var(--main-font);
     font-size: 36px;
 }
 
@@ -211,7 +211,7 @@ tbody tr {
     #day-cash-report-text {
         margin-left: 18px;
         padding-top: 5px;
-        font-family: "Black Han Sans";
+        font-family: var(--main-font);
         font-size: 18px;
     }
 

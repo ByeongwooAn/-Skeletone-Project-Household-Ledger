@@ -3,7 +3,7 @@ header {
     width: 100vw;
     height: 60px;
     background-color: #ffeb60;
-    font-family: "Black Han Sans";
+    font-family: var(--main-font);
     font-size: 24px;
     padding-top: 10px;
     text-align: center;
@@ -14,7 +14,7 @@ body.dark-mode header {
     width: 100vw;
     height: 60px;
     background-color: #090254;
-    font-family: "Black Han Sans";
+    font-family: var(--main-font);
     color: #ffeb60;
     font-size: 24px;
     padding-top: 10px;
@@ -62,7 +62,7 @@ body.dark-mode #menu-image {
     width: 128px;
     height: 100vh;
     background-color: #ffeb60;
-    font-family: "Black Han Sans";
+    font-family: var(--main-font);
     font-size: 20px;
     color: #0b036b;
 

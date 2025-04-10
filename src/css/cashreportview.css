@@ -9,7 +9,7 @@
 .headers > h2 {
     font-size: 36px;
     margin: 20px;
-    font-family: "Black Han Sans", sans-serif;
+    font-family: var(--main-font);
 }
 .month-picker {
     display: inline-flex;

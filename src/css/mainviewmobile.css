@@ -21,7 +21,7 @@
 }
 
 .mobile-mainview-text {
-    font-family: "Black Han Sans";
+    font-family: var(--main-font);
     font-size: 20px;
 }
 

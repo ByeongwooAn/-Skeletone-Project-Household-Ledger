@@ -14,7 +14,7 @@ a:visited {
     width: 270px;
     height: 100vh;
     background-color: #ffeb60;
-    font-family: "Black Han Sans";
+    font-family: var(--main-font);
     font-size: 32px;
     color: #0b036b;
 }

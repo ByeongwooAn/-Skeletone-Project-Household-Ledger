@@ -1,94 +1,94 @@
 .page-wrapper {
-  margin-top: 60px; /* 메뉴바 높이만큼 내려주기 */
-  padding: 20px 0 20px 0;
+    margin-top: 60px; /* 메뉴바 높이만큼 내려주기 */
+    padding: 20px 0 20px 0;
 }
 @media (max-width: 393px) {
-  .cashflow-container {
-    /* background-color: #ff0303; */
-    padding: 2rem;
-    width: 100%;
-    max-width: 393px;
-    box-sizing: border-box;
+    .cashflow-container {
+        /* background-color: #ff0303; */
+        padding: 2rem;
+        width: 100%;
+        max-width: 393px;
+        box-sizing: border-box;
 
-    display: block;
-  }
+        display: block;
+    }
 
-  .content {
-    background-color: #fef7d1;
-    border: 2px solid rgba(187, 170, 187, 0.6706);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: 550px;
-    margin-top: 20px;
-    padding: 2rem 0.8rem;
-    border-radius: 20px;
-    padding-top: 40px;
-  }
-  .button-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    padding: 0.5rem 0;
-  }
+    .content {
+        background-color: #fef7d1;
+        border: 2px solid rgba(187, 170, 187, 0.6706);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        height: 550px;
+        margin-top: 20px;
+        padding: 2rem 0.8rem;
+        border-radius: 20px;
+        padding-top: 40px;
+    }
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        padding: 0.5rem 0;
+    }
 
-  .button-group button {
-    width: 48%;
-    padding: 0.8rem 1rem;
-    font-family: 'Black Han Sans';
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 12px;
-    border: 2px solid #ccc;
-    background: white;
-  }
+    .button-group button {
+        width: 48%;
+        padding: 0.8rem 1rem;
+        font-family: var(--main-font);
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 12px;
+        border: 2px solid #ccc;
+        background: white;
+    }
 
-  .button-group .expenseactive {
-    border-color: #ff6363;
-    background-color: #ff6363;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .button-group .incomeactive {
-    border-color: #5685e9;
-    background-color: #5685e9;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    .button-group .expenseactive {
+        border-color: #ff6363;
+        background-color: #ff6363;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .button-group .incomeactive {
+        border-color: #5685e9;
+        background-color: #5685e9;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-  .form-group {
-    margin-bottom: 1.2rem;
-  }
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
 
-  .form-group label {
-    display: block;
-    margin-bottom: 0.3rem;
-    font-weight: bold;
-    font-size: 0.95rem;
-  }
+    .form-group label {
+        display: block;
+        margin-bottom: 0.3rem;
+        font-weight: bold;
+        font-size: 0.95rem;
+    }
 
-  .form-group input,
-  .form-group select {
-    width: 100%;
-    padding: 0.6rem;
-    background-color: transparent;
-    font-size: 1rem;
-    border: none;
-    border-bottom: 2px solid #cccccc;
-    box-sizing: border-box;
-  }
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 0.6rem;
+        background-color: transparent;
+        font-size: 1rem;
+        border: none;
+        border-bottom: 2px solid #cccccc;
+        box-sizing: border-box;
+    }
 
-  .submit-button {
-    width: 100%;
-    padding: 0.9rem;
-    background-color: #f99810;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    margin-top: 1.5rem;
-    font-size: 1rem;
-  }
+    .submit-button {
+        width: 100%;
+        padding: 0.9rem;
+        background-color: #f99810;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        margin-top: 1.5rem;
+        font-size: 1rem;
+    }
 }
 /* 
 @media (min-width: 768px) {
