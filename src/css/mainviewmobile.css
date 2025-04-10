@@ -13,11 +13,13 @@
 }
 
 .mobile-main-attribute-div {
-    width: 322.03px;
+    width: 350px;
     height: 27.47px;
     background-color: #fffefa;
     border-radius: 30px;
     text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
 }
 
 .mobile-mainview-text {
