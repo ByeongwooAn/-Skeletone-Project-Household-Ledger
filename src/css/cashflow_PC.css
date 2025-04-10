@@ -1,10 +1,8 @@
 /* PC버전 */
 
-@media (min-width: 394px) {
+@media (min-width: 393px) {
   /* 전체 컨테이너 */
   .cashflow-container {
-    background-color: #fdfce5;
-
     display: flex;
     padding-left: 400px; /*왼쪽 메뉴 공간확보*/
     justify-content: center;

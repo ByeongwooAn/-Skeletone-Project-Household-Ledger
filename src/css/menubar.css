@@ -14,7 +14,6 @@ a:visited {
   font-family: 'Black Han Sans';
   font-size: 32px;
   color: #0b036b;
-  position: fixed;
 }
 
 #menu > div {
@@ -34,4 +33,14 @@ a:visited {
   display: none;
   padding-right: 67px;
   color: #5d5d5d;
+}
+
+/* 다크 모드용 메뉴바 스타일 */
+body.dark-mode #menu {
+  background-color: #090254; /* 어두운 배경 */
+  color: #ffeb60; /* 텍스트 색상도 밝게 */
+}
+
+body.dark-mode #cashmonth-div-child {
+  color: #bbbbbb; /* 서브 메뉴 텍스트도 밝게 조정 */
 }

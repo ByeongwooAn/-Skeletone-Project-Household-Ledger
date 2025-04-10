@@ -1,8 +1,6 @@
 /* 공통 레이아웃 */
 .cash-statistics-view {
-  background-color: #fffde7;
   padding: 1rem;
-  margin-left: 270px;
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -63,7 +61,11 @@
 }
 
 /* 날짜 선택 */
-.date-selector {
+.mobile-date-selector {
+  display: none;
+}
+
+.desktop-date-selector {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -162,25 +164,55 @@
 }
 
 /* 모바일 버전 */
-@media (max-width: 768px) {
+@media (max-width: 796px) {
   .cash-statistics-view {
     margin-left: 0;
   }
+
+  .tab-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .tab-menu .tab {
+    margin-bottom: 0.5rem;
+    background-color: #fffde7;
+    border-radius: 0;
+  }
+
+  .tab-menu .tab.active {
+    background-color: #fffde7;
+    border-bottom: 2px solid #fdd835;
+  }
+
+  .mobile-date-selector {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .desktop-date-selector {
+    display: none;
+  }
+
+  .mobile-date-selector .date-selector button {
+    background-color: #fdd835;
+    border: none;
+    border-radius: 50%;
+    margin: 0rem 1rem;
+    padding: 0.4rem 0.7rem;
+    font-weight: bold;
+  }
+
   .chart-summary-container {
     flex-direction: column;
   }
 
-  .chart-area,
-  .summary-box {
-    width: 325px;
-  }
-
-  .tab-menu {
-    flex-direction: row;
-  }
-
-  .tab {
-    margin-bottom: 0.5rem;
+  .card .category {
+    word-break: keep-all;
+    white-space: normal;
   }
 
   .detail-card {

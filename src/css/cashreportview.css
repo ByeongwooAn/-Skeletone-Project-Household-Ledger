@@ -1,5 +1,8 @@
 .container {
-  margin: 20px;
+  margin: 300px;
+
+  min-width: 600px;
+
   }
   /* 헤더 영역 */
   .headers{
@@ -73,6 +76,12 @@
     
   }
   
+  .tab.active .incomeAmount{
+    color: green;
+  }
+  .tab.active .expenseAmount{
+    color: red;
+  }
   
   
   /* 테이블 영역 */
@@ -107,12 +116,13 @@
   
   /* 반응형: 화면 너비 줄어들 때 */
   
-  
-  @media (max-width: 400px) {
+  /* 최대 400px까지 이 미디어쿼리를 적용 */
+  @media (max-width: 393px) {
     .container {
       width: 100%;
-      min-width: 396px;;
+      min-width: 393px;
       margin-top: 70px;
+      margin-left:0;
       padding: 12px;
       
     }
