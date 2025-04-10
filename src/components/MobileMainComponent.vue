@@ -11,6 +11,9 @@ const list = ref([]);
 const incomeTotal = ref(0);
 const expenseTotal = ref(0);
 
+const date = new Date();
+const month = date.getMonth() + 1;
+
 // API 호출 함수
 async function getTypeTotal(type) {
     try {
@@ -37,8 +40,9 @@ onMounted(async () => {
     <div class="page-wrapper">
         <div id="mobile-main-div1" class="mobile-mainview-div">
             <div id="mobile-mainview-text1" class="mobile-mainview-text">
-                4월 수입 지출 총액
+                {{ month }}월 수입 지출 총액
             </div>
+            <!-- API 값 표시 -->
             <div id="mobile-main-adttribute1" class="mobile-main-attribute-div">
                 총 수입: {{ incomeTotal.toLocaleString() }}원
             </div>
@@ -48,13 +52,13 @@ onMounted(async () => {
         </div>
         <div id="mobile-main-div2" class="mobile-mainview-div">
             <div id="mobile-mainview-text2" class="mobile-mainview-text">
-                월간 수입 지출 비율
+                {{ month }}월 수입 지출 비율
                 <div id="mobile-doughnutchart-div"><DoughnutChart /></div>
             </div>
         </div>
         <div id="mobile-main-div3" class="mobile-mainview-div">
             <div id="mobile-mainview-text3" class="mobile-mainview-text">
-                4월 최근 거래 내역
+                최근 추가 내역
             </div>
             <div
                 id="mobile-main-deal-report1"

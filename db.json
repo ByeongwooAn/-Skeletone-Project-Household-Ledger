@@ -55,7 +55,7 @@
       "createdAt": "2025-04-10T13:39:18.073Z"
     },
     {
-      "id": "7",
+      "id": 7,
       "type": "income",
       "date": "2025-04-17",
       "amount": 250000,
@@ -64,7 +64,7 @@
       "createdAt": "2025-04-10T13:40:10.613Z"
     },
     {
-      "id": "8",
+      "id": 8,
       "type": "income",
       "date": "2025-04-17",
       "amount": 90000,
@@ -73,7 +73,7 @@
       "createdAt": "2025-04-10T13:41:47.697Z"
     },
     {
-      "id": "9",
+      "id": 9,
       "type": "income",
       "date": "2025-04-26",
       "amount": 3000000,
@@ -82,7 +82,7 @@
       "createdAt": "2025-04-10T13:42:23.411Z"
     },
     {
-      "id": "10",
+      "id": 10,
       "type": "expense",
       "date": "2025-04-18",
       "amount": 600000,
@@ -91,13 +91,22 @@
       "createdAt": "2025-04-10T13:43:49.723Z"
     },
     {
-      "id": "11",
+      "id": 11,
       "type": "expense",
       "date": "2025-04-10",
       "amount": 200000,
       "category": "😷건강/의료",
       "memo": "치과",
       "createdAt": "2025-04-10T13:51:19.533Z"
+    },
+    {
+      "id": 12,
+      "type": "income",
+      "date": "2025-04-10",
+      "amount": 50000,
+      "category": "🤑기타",
+      "memo": "로또 3등",
+      "createdAt": "2025-04-10T14:02:43.734Z"
     }
   ],
   "userInfo": [
@@ -106,9 +115,9 @@
       "name": "홍길동",
       "nickname": "홍",
       "email": "123@ㅜㅁㅍㄷㄱ.채ㅡ",
-      "mode": "dark",
-      "themeColor": "Basic",
-      "fontSetting": "Black Han Sans"
+      "mode": "light",
+      "themeColor": "Orange",
+      "fontSetting": "Do hyeon"
     }
   ]
 }
