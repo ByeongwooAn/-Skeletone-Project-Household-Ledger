@@ -86,16 +86,18 @@
 .table-header,
 .table-row {
     display: grid;
-    grid-template-columns: 40px 1fr 1fr 1fr 2fr 40px;
+    grid-template-columns: 1fr 1fr 1fr 2fr 90px;
     align-items: center;
     padding: 8px;
     border-bottom: 1px solid #ddd;
     gap: 0px 20px;
+    text-align: center;
 }
 
 .table-header {
     background-color: #f8f8f8;
     font-weight: bold;
+   
 }
 
 .amount.plus {
@@ -105,6 +107,27 @@
 .amount.minus {
     color: red;
 }
+.trash-icon:hover{
+  color: red;
+}
+
+.delete-all-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.delete-all-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+
 
 /* 반응형: 화면 너비 줄어들 때 */
 
