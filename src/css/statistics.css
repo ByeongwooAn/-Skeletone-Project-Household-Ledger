@@ -162,17 +162,9 @@
 }
 
 /* 모바일 버전 */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .cash-statistics-view {
     margin-left: 0;
-  }
-  .chart-summary-container {
-    flex-direction: column;
-  }
-
-  .chart-area,
-  .summary-box {
-    width: 325px;
   }
 
   .tab-menu {
@@ -181,6 +173,20 @@
 
   .tab {
     margin-bottom: 0.5rem;
+  }
+
+  .chart-summary-container {
+    flex-direction: column;
+  }
+
+  .chart-area,
+  .summary-box {
+    width: 90%;
+  }
+
+  .card .category {
+    word-break: keep-all;
+    white-space: normal;
   }
 
   .detail-card {
