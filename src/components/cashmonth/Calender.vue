@@ -1,7 +1,9 @@
 <script setup>
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { useCalendar } from "@/function/calender.js";
 import "../../css/calender.css";
+
+const cashflowsByDate = ref({});
 
 const {
     weekNames,
@@ -14,8 +16,23 @@ const {
     isToday,
 } = useCalendar();
 
-onMounted(() => {
+onMounted(async () => {
     init();
+
+    const res = await fetch("/db.json");
+    const data = await res.json();
+
+    const grouped = {};
+
+    data.cashflows.forEach((item) => {
+        const date = item.date;
+        if (!grouped[date]) {
+            grouped[date] = { income: 0, expense: 0 };
+        }
+        grouped[date][item.type] += item.amount;
+    });
+
+    cashflowsByDate.value = grouped;
 });
 </script>
 
@@ -57,12 +74,52 @@ onMounted(() => {
                             saturday: colIndex === 6,
                         }"
                     >
-                        <span
-                            v-if="isToday(currentYear, currentMonth, day)"
-                            id="today"
-                            >{{ day }}</span
+                        <div>
+                            <span
+                                v-if="isToday(currentYear, currentMonth, day)"
+                                id="today"
+                                >{{ day }}</span
+                            >
+                            <span v-else>{{ day }}</span>
+                        </div>
+                        <!-- 수입/지출 표시 -->
+                        <div
+                            v-if="
+                                cashflowsByDate[
+                                    `${currentYear}-${String(
+                                        currentMonth
+                                    ).padStart(2, '0')}-${String(day).padStart(
+                                        2,
+                                        '0'
+                                    )}`
+                                ]
+                            "
                         >
-                        <span v-else>{{ day }}</span>
+                            <div style="color: red">
+                                -
+                                {{
+                                    cashflowsByDate[
+                                        `${currentYear}-${String(
+                                            currentMonth
+                                        ).padStart(2, "0")}-${String(
+                                            day
+                                        ).padStart(2, "0")}`
+                                    ].expense.toLocaleString()
+                                }}
+                            </div>
+                            <div style="color: blue">
+                                +
+                                {{
+                                    cashflowsByDate[
+                                        `${currentYear}-${String(
+                                            currentMonth
+                                        ).padStart(2, "0")}-${String(
+                                            day
+                                        ).padStart(2, "0")}`
+                                    ].income.toLocaleString()
+                                }}
+                            </div>
+                        </div>
                     </td>
                 </tr>
             </tbody>
