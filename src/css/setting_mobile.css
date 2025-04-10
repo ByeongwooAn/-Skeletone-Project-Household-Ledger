@@ -1,5 +1,4 @@
 .page-wrapper {
-  background-color: #fcfcea;
   min-height: 100vh;
   padding: 40px 20px;
   margin-top: 60px;
@@ -30,6 +29,13 @@
 /* 제목 스타일 */
 h2 {
   font-family: 'Black Han Sans';
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+body.dark-mode h2 {
+  font-family: 'Black Han Sans';
+  color: #ffeb60;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;

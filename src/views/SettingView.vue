@@ -16,6 +16,7 @@ const fontSetting = ref('Black Han Sans');
 onMounted(async () => {
   const res = await axios.get('http://localhost:3001/userInfo/1');
   userInfo.value = res.data;
+  mode.value = res.data.mode || 'light';
 });
 
 const saveSettings = async () => {
@@ -28,6 +29,14 @@ const saveSettings = async () => {
       themeColor: themeColor.value,
       fontSetting: fontSetting.value,
     });
+
+    if (mode.value === 'dark') {
+      document.body.classList.add('dark-mode');
+      document.body.classList.remove('light-mode');
+    } else {
+      document.body.classList.add('light-mode');
+      document.body.classList.remove('dark-mode');
+    }
     alert('설정이 저장되었습니다!');
   } catch (error) {
     console.error('저장 실패:', error);
@@ -36,7 +45,6 @@ const saveSettings = async () => {
 };
 </script>
 <template>
-  <<<<<<< HEAD
   <!-- 컴포넌트 전체를 감싸는 페이지 -->
   <div class="page-wrapper">
     <!-- 개인정보 카드 -->

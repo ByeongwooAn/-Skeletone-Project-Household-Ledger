@@ -9,6 +9,18 @@ header {
   text-align: center;
   align-content: center;
 }
+body.dark-mode header {
+  position: fixed;
+  width: 100vw;
+  height: 60px;
+  background-color: #090254;
+  font-family: 'Black Han Sans';
+  color: #ffeb60;
+  font-size: 24px;
+  padding-top: 10px;
+  text-align: center;
+  align-content: center;
+}
 
 li {
   font-size: 15px;
@@ -20,8 +32,21 @@ li {
   float: left;
 
   margin-left: 16px;
-  width: 23px;
-  height: 23px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../asset/image/menu.png');
+  background-size: cover;
+  background-position: center;
+}
+
+body.dark-mode #menu-image {
+  background-image: url('../asset/image/menuyellow.png');
+  background-size: cover;
+  background-position: center;
+  float: left;
+  margin-left: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 #logo-image {
@@ -96,4 +121,18 @@ li {
 .slide-leave-to {
   transform: translateX(-100%);
   opacity: 0;
+}
+
+/* 모바일 메뉴바 다크 모드 */
+body.dark-mode #mobile-menu {
+  background-color: #090254;
+  color: #ffeb60;
+}
+
+body.dark-mode #mobile-menu div {
+  color: #ffeb60;
+}
+
+body.dark-mode #mobile-menu div:hover {
+  background-color: #8277f586;
 }
