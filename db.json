@@ -1,7 +1,7 @@
 {
   "cashflows": [
     {
-      "id": 1,
+      "id": "1",
       "type": "expense",
       "date": "2025-04-14",
       "amount": 20000,
@@ -9,12 +9,23 @@
       "memo": "됐나?!!"
     },
     {
-      "id": 2,
+      "id": "2",
       "type": "income",
       "date": "2025-04-09",
       "amount": 23000,
       "category": "💰부수입",
       "memo": "!!"
+    }
+  ],
+  "userInfo": [
+    {
+      "id": "1",
+      "name": "홍길동",
+      "nickname": "홍",
+      "email": "123@ㅜㅁㅍㄷㄱ.채ㅡ",
+      "mode": "dark",
+      "themeColor": "Orange",
+      "fontSetting": "Sunflower"
     }
   ]
 }
