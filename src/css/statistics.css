@@ -63,7 +63,11 @@
 }
 
 /* 날짜 선택 */
-.date-selector {
+.mobile-date-selector {
+  display: none;
+}
+
+.desktop-date-selector {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -162,7 +166,7 @@
 }
 
 /* 모바일 버전 */
-@media (max-width: 600px) {
+@media (max-width: 796px) {
   .cash-statistics-view {
     margin-left: 0;
   }
@@ -185,13 +189,27 @@
     border-bottom: 2px solid #fdd835;
   }
 
-  .chart-summary-container {
-    flex-direction: column;
+  .mobile-date-selector {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
   }
 
-  .chart-area,
-  .summary-box {
-    width: 90%;
+  .desktop-date-selector {
+    display: none;
+  }
+
+  .mobile-date-selector .date-selector button {
+    background-color: #fdd835;
+    border: none;
+    border-radius: 50%;
+    margin: 0rem 1rem;
+    padding: 0.4rem 0.7rem;
+    font-weight: bold;
+  }
+
+  .chart-summary-container {
+    flex-direction: column;
   }
 
   .card .category {
