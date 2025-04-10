@@ -1,6 +1,7 @@
 <script setup>
 import "../css/mainviewmobile.css";
 import { RouterLink } from "vue-router";
+import DoughnutChart from "./cashmonth/DoughnutChart.vue";
 </script>
 
 <template>
@@ -19,6 +20,7 @@ import { RouterLink } from "vue-router";
         <div id="mobile-main-div2" class="mobile-mainview-div">
             <div id="mobile-mainview-text2" class="mobile-mainview-text">
                 월간 수입 지출 비율
+                <div id="mobile-doughnutchart-div"><DoughnutChart /></div>
             </div>
         </div>
         <div id="mobile-main-div3" class="mobile-mainview-div">

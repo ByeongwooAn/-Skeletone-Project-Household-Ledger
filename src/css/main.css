@@ -1,32 +1,32 @@
 * {
-  padding: 0px;
-  margin: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 
 body {
-  background-color: #feffed;
+    background-color: #feffed;
 }
 
 body.dark-mode {
-  background-color: #2b2761;
+    background-color: #2b2761;
 }
 
 #container {
-  display: flex;
+    display: flex;
 }
 
 #page-rendering-div {
-  width: 100%;
-  height: 100vh;
+    width: 100%;
+    height: 100vh;
 }
 
 /* 모바일 버전 */
 @media (max-width: 394px) {
-  #container {
-    display: block;
-  }
+    #container {
+        display: block;
+    }
 
-  #page-rendering-div {
-    width: 100%;
-  }
+    #page-rendering-div {
+        width: 100%;
+    }
 }

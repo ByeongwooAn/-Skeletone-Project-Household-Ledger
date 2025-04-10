@@ -80,7 +80,7 @@ const cashflows = ref([]);
 
 onMounted(async () => {
   try {
-    const res = await axios.get('http://localhost:3000/cashflows');
+    const res = await axios.get('http://localhost:3001/cashflows');
     cashflows.value = res.data;
     console.log('불러온 데이터:', cashflows.value);
   } catch (err) {
