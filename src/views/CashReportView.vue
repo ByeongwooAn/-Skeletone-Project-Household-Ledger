@@ -61,6 +61,7 @@
           {{ formatCurrency(item.amount) }}
         </div>
         <div>{{ item.memo }}</div>
+        <div>삭제버튼</div>
       </div>
     </div>
    
