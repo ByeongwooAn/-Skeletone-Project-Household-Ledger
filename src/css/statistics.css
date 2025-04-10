@@ -20,17 +20,17 @@
   margin-bottom: 1rem;
 }
 
-.tab {
+.tab-menu .tab {
   padding: 0.5rem 1rem;
   background-color: #fef9c4;
   border: none;
   font-weight: bold;
   cursor: pointer;
   margin-right: 0.5rem;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 0.5rem;
 }
 
-.tab.active {
+.tab-menu .tab.active {
   background-color: #ffeb60;
   border-bottom: 2px solid #fdd835;
 }
