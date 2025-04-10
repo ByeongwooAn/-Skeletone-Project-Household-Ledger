@@ -98,6 +98,15 @@
       "category": "😷건강/의료",
       "memo": "치과",
       "createdAt": "2025-04-10T13:51:19.533Z"
+    },
+    {
+      "id": 12,
+      "type": "income",
+      "date": "2025-04-10",
+      "amount": 50000,
+      "category": "🤑기타",
+      "memo": "로또 3등",
+      "createdAt": "2025-04-10T14:02:43.734Z"
     }
   ],
   "userInfo": [
@@ -106,9 +115,9 @@
       "name": "홍길동",
       "nickname": "홍",
       "email": "123@ㅜㅁㅍㄷㄱ.채ㅡ",
-      "mode": "dark",
-      "themeColor": "Basic",
-      "fontSetting": "Black Han Sans"
+      "mode": "light",
+      "themeColor": "Orange",
+      "fontSetting": "Do hyeon"
     }
   ]
 }
