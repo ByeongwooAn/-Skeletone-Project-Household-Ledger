@@ -30,15 +30,22 @@ li {
 
 #menu-image {
   float: left;
-
   margin-left: 16px;
-  width: 23px;
-  height: 23px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../asset/image/menu.png');
+  background-size: cover;
+  background-position: center;
 }
 
-body.dark-mode #logo-text {
-  color: #ffeb60;
-  background-color: #090254;
+body.dark-mode #menu-image {
+  background-image: url('../asset/image/menuyellow.png');
+  background-size: cover;
+  background-position: center;
+  float: left;
+  margin-left: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 #logo-image {
